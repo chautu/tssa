@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/top.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-address/1.6.3/jquery.address-1.6.3.min.js"></script>
+	<script src="js/url.js"></script>
+</head>
+<body id="content">
+    <div id="wrapper">
+        <header class="">
+			<div class="header_wrap">
+				<div id="logo">
+					<a href="index.html" id="trang-chu"><img src="img/logo.png" alt="一流の職人に学ぶ寿司教室"></a>
+				</div>
+				<nav class="header_menu pc">
+					<ul>
+						<li><p id="changeUrl" key="schoolGuide" >学校案内</p></li>
+						<li><a key="courseInformation" href="courses-and-fees.html">コース案内</a></li>
+						<li><a key="employmentSupport" href="career.html">就職サポート</a></li>
+						<li><a key="lecturerIntroduction" href="instructors.html">講師紹介</a></li>
+						<li><a key="faq" href="faq.html">よくある質問</a></li>
+						<li><a key="sushiRestaurants"  href="sushi-owners.html">寿司店様へ</a></li>
+                        <li>
+                            <select id="languageSelect">
+                                <option key="languageJa" value="ja" selected="selected">日本語</option>
+                                <option key="languageEn" value="en" >英語　</option>
+                                
+                            </select>
+                        </li>
+					</ul>
+				</nav>
+				
+				<div id="trigger-menu" class="sp">
+					<span class="line"></span>
+					<span class="line"></span>
+					<span class="line"></span>
+				</div>
+				<div id="gnav_sp" class="sp">
+					<nav id="gnav">
+						<ul>
+						<li><a href="https://tssa.jp/access/">学校案内</a></li>
+						<li><a href="https://tssa.jp/courses-and-fees/">コース案内</a></li>
+						<li><a href="https://tssa.jp/career/">就職サポート</a></li>
+						<li><a href="https://tssa.jp/instructors/">講師紹介</a></li>
+						<li><a href="https://tssa.jp/faq/">よくある質問</a></li>
+						<li><a href="https://tssa.jp/sushi-owners/">寿司店様へ</a></li>
+						</ul>
+					</nav>
+				</div>
+				
+			</div>
+		</header>
+        <div id="mvisual">
+			<div class="mv_wrap">
+				<div class="mv_top_text">
+					<h1 class="mv_title">東京寿司職人育成アカデミー</h1>
+					<h2 class="mv_title">世界で活躍できる寿司職人へ</h2>
+				</div>
+				<div class="mv_main_text">
+					<img src="img/mv_text.png" alt="国内外の高級店で磨かれた匠の技をすべて学べる">
+				</div>
+				<div class="mv_sub_text">
+					<p>〈2025年6月~8月コース限定〉<br>総額77万円が今だけ<span>30</span>万円に！残り5枠！</p>
+				</div>
+				<div class="mv_bottom_text">
+					<img src="img/mv_circle_text.png" alt="高級鮨店で 現場体験も可能" class="circle_txt">
+					<img src="img/mv_side_text.png" alt="代表講師 木立 健太" class="side_txt side_txt_pc">
+					<img src="img/mv_side_text_sp.png" alt="代表講師 木立 健太" class="side_txt side_txt_sp">
+				</div>
+			</div>
+		</div>
+		<div class="cta_sec">
+			<div class="container">
+				<h2 class="tit_cta">〈2025年6月~8月コース限定〉<br>総額77万円が今だけ<span>30</span>万円に！残り5枠！</h2>
+				<div class="btn_list_cta">
+					<a href="https://tssa.jp/contact/" class="btn_cta01"><span>資料請求、無料見学会は<br>こちらをクリック</span></a>
+					<a href="https://tssa.jp/contact/#tab03" class="btn_cta02"><span>お問い合わせはこちら</span></a>
+					<a href="https://tssa.jp/contact/#tab02" class="btn_cta03"><span>入学願書申し込み</span></a>
+				</div>
+				<p>電話でのお問い合わせもお待ちしております。<br class="sp_break">【 03-6278-7586 】</p>
+			</div>
+		</div>
+		<div id="content">
+			<main>
+				<section id="academy">
+					<div class="container">
+						<div class="case">
+							<div class="slider">
+								<div class="list">
+									<div class="item">
+										<img src="img/ph_academic01.jpg" alt="image1">
+									</div>
+								</div>
+							</div>
+							<div class="pack">
+								<h2 class="tit_sub tit_sub02">
+									<span class="tit_en">academy</span>
+									<span class="tit_jp">東京寿司職人<br>育成アカデミーとは</span>
+								</h2>
+								<h3 class="tit_sec">本物の職人のもと最短2ヶ月で<br>寿司職人を目指す</h3>
+								<p>
+									我々は2ヶ月という短期間で０から国内外のどこでも即戦力で通用する高いレベルの寿司職人を育成するアカデミーです。<br>
+									米を炊く、魚を捌く、寿司を握るといった基本の仕事も就業先によって全て変わってくることがほとんどです。<br>
+									当アカデミーでは高級店、大衆店、回転寿司の仕事、また海外で調理器具がない、水や魚、調味料が違うといった場合の仕事も学んで頂きます。<br>
+									当アカデミー卒業後は高級店、大衆店、回転寿司また海外での就職もサポートさせて頂きます。
+								</p>
+								<a href="access.html" class="btn"><span>学校案内</span></a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="course" class="alt_bg">
+					<div class="container-wide">
+						<div class="case_style01 case-right">
+							<div class="img_pack">
+								<img src="img/ph_course.jpg" alt="コース案内">
+							</div>
+							<div class="pack">
+								<h2 class="tit_sub tit_sub02">
+									<span class="tit_en">course</span>
+									<span class="tit_jp">コース案内</span>
+								</h2>
+								<a href="courses-and-fees.html" class="btn"><span>コースをもっと見る</span></a>
+							</div>
+						</div>
+						<div class="bnr_wrap">
+							<a href="https://tssa.jp/courses-and-fees/intensive/">
+								<img src="img/bnr_course.jpg" alt="2ヶ月集中特訓コース">
+							</a>
+						</div>
+					</div>
+				</section>
+				<div class="cta_sec">
+					<div class="container">
+					<h2 class="tit_cta">〈2025年6月~8月コース限定〉<br>総額77万円が今だけ<span>30</span>万円に！残り5枠！</h2>
+						<div class="btn_list_cta">
+							<a href="https://tssa.jp/contact/" class="btn_cta01"><span>まずは資料請求（無料）</span></a>
+							<a href="https://tssa.jp/contact/#tab03" class="btn_cta02"><span>お問い合わせはこちら</span></a>
+							<a href="https://tssa.jp/contact/#tab02" class="btn_cta03"><span>入学願書申し込み</span></a>
+						</div>
+					</div>
+				</div>
+				<section id="instructors" class="alt_bg">
+					<div class="container-wide">
+						<div class="case_style01 case-left">
+							<div class="img_pack">
+								<img src="img/ph_instructors.jpg" alt="業界トップクラスの現役寿司職人が講師陣">
+							</div>
+							<div class="pack">
+								<h2 class="tit_sub tit_sub02">
+									<span class="tit_en">instructors</span>
+									<span class="tit_jp">業界トップクラスの<br>現役寿司職人が講師陣</span>
+								</h2>
+								<p>
+									包丁の使い方から握り方まで、基礎から丁寧に教えます。<br>
+									少人数制で、きめ細やかな指導を行うため、初心者の方でも安心して受講できます。
+								</p>
+								<a href="https://tssa.jp/instructors/" class="btn"><span>講師陣をもっと見る</span></a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="enroll">
+					<div class="container-wide">
+						<div class="case_style01 case-right">
+							<div class="img_pack">
+								<img src="img/ph_enroll.jpg" alt="入学希望の方へ">
+							</div>
+							<div class="pack">
+								<h2 class="tit_sub tit_sub02">
+									<span class="tit_en">enroll</span>
+									<span class="tit_jp">入学希望の方へ</span>
+								</h2>
+							</div>
+						</div>
+						<div class="enroll_links">
+							<a href="https://tssa.jp/courses-and-fees/#tuition">
+								<img src="img/ico_enroll01.png" alt="学費">
+								<span>　　学費　</span>
+							</a>
+							<a href="https://tssa.jp/career/">
+								<img src="img/ico_enroll02.png" alt="就職サポート">
+								<span>就職サポート</span>
+							</a>
+							<a href="https://tssa.jp/maintenance/">
+								<img src="img/ico_enroll03.png" alt="受験生の1日">
+								<span>受験生の1日</span>
+							</a>
+							<a href="https://tssa.jp/maintenance/">
+								<img src="img/ico_enroll04.png" alt="動画で見る レッスン">
+								<span>動画で見る<br>レッスン</span>
+							</a>
+						</div>
+					</div>
+				</section>
+				<section id="strengths" class="alt_bg">
+					<div class="container">
+						<h2 class="tit_sub">
+							<span class="tit_en">strengths</span>
+							<span class="tit_jp">東京寿司職人アカデミーの強み</span>
+						</h2>
+						<div class="strengths_list">
+							<div class="case">
+								<img src="img/ph_strength01.jpg" alt="実力派高級鮨店「銀座 鮨 佑」と提携">
+								<h3 class="tit_sec">高級鮨店<br><span>「銀座 鮨 佑」</span>と<br>提携</h3>
+							</div>
+							<div class="case">
+								<img src="img/ph_strength02.jpg" alt="医療・IT・人材など幅広い事業展開を行う DYMグループだから卒業後の紹介先多数">
+								<h3 class="tit_sec">医療・IT・人材など幅広い事業展開を行う<br class="sp_break">DYMグループだから<br><span>卒業後の紹介先多数</span></h3>
+							</div>
+							<div class="case">
+								<img src="img/ph_strength03.jpg" alt="五つ星やミシュラン獲得店も紹介可能">
+								<h3 class="tit_sec"><span>五つ星ホテル</span>や<br><span>ミシュラン獲得店</span>も<br>紹介可能</h3>
+							</div>
+						</div>
+					</div>
+				</section>
+				<div class="cta_sec">
+					<div class="container">
+					<h2 class="tit_cta">〈2025年6月~8月コース限定〉<br>総額77万円が今だけ<span>30</span>万円に！残り5枠！</h2>
+						<div class="btn_list_cta">
+							<a href="https://tssa.jp/contact/" class="btn_cta01"><span>まずは資料請求（無料）</span></a>
+							<a href="https://tssa.jp/contact/#tab03" class="btn_cta02"><span>お問い合わせはこちら</span></a>
+							<a href="https://tssa.jp/contact/#tab02" class="btn_cta03"><span>入学願書申し込み</span></a>
+						</div>
+					</div>
+				</div>
+				
+				<div id="bnr_chef">
+					<div class="bnr_chef_wrap">
+						<a href="https://tssa.jp/sushi-owners/"><img src="img/bnr_chef.jpg" alt="採用をお考えの寿司店様へ"></a>
+					</div>
+				</div>
+				<section id="faq" class="alt_bg">	
+					<div class="container">
+						<h2 class="tit_sub">
+							<span class="tit_en">faq</span>
+							<span class="tit_jp">よくある質問</span>
+						</h2>
+						<div class="faq_wrap">
+							<dl>
+								<dt class="active">卒業後のサポートはありますか？</dt>
+								<dd style="display: block;">当校の運営母体では国内外で広く人材事業、WEB事業、不動産事業等の運営もしております。国内外問わずご希望にそった就職、開業のサポートをさせていただきます。</dd>
+							</dl>
+							<dl>
+								<dt>入学資格はありますか？</dt>
+								<dd>ございません。しっかり学んで卒業後はしっかり稼いでください。</dd>
+							</dl>
+							<dl>
+								<dt>調理経験が無くても大丈夫ですか？</dt>
+								<dd>
+									当校では基礎から学んで頂きます。<br>
+									包丁の握り方、道具の手入れから学んで頂きます。<br>
+									また経験者の方々も普通は既製品に頼るようなものも手作り出来る様なカリキュラムを組んでおりますので新たな技術の習得が可能です。
+								</dd>
+							</dl>
+							<dl>
+								<dt>２ヶ月で寿司職人になれますか？</dt>
+								<dd>技術はもちろん寿司職人としての心構えからカウンターでの所作、英語での料理説明等、現場で通用するレベルまで習得して頂きます。</dd>
+							</dl>
+						</div>
+						<a href="https://tssa.jp/faq/" class="btn"><span>もっと見る</span></a>
+					</div>
+				</section>
+				<div class="cta_sec">
+					<div class="container">
+					<h2 class="tit_cta">〈2025年6月~8月コース限定〉<br>総額77万円が今だけ<span>30</span>万円に！残り5枠！</h2>
+						<div class="btn_list_cta">
+							<a href="https://tssa.jp/contact/" class="btn_cta01"><span>まずは資料請求（無料）</span></a>
+							<a href="https://tssa.jp/contact/#tab03" class="btn_cta02"><span>お問い合わせはこちら</span></a>
+							<a href="https://tssa.jp/contact/#tab02" class="btn_cta03"><span>入学願書申し込み</span></a>
+						</div>
+					</div>
+				</div> 
+			</main>
+		</div>
+		<footer>
+			<div class="f_wrap">
+				<div class="container">
+					<div class="case">
+						<div id="f_logo">
+							<a class="logo_image" href="https://tssa.jp/"><img src="img/logo_footer.png" alt="sushi"></a>
+							<div class="f_details">
+								<p>
+									〒104-0061<br>
+									東京都中央区銀座２丁目１１−１９国光ビル4階
+								</p>
+								<p>
+									TEL：03-6278-7586<br>
+									営業日：月・火・木・金・土(祝日除く)
+								</p>
+								<p>
+									＜アクセス＞<br>
+									銀座一丁目駅から徒歩　2分<br>
+									東銀座駅から徒歩　4分<br>
+									銀座駅から徒歩　6分<br>
+									有楽町駅から徒歩　8分
+								</p>
+							</div>
+						</div>
+						<div class="f_links_wrap">
+							<div class="f_link_item">
+								<ul class="f_links">
+									<li><a href="https://tssa.jp/access/">学校案内</a></li>
+									<li class="sp"><a href="https://tssa.jp/career/">就職サポート</a></li>
+									<li>
+										<a href="https://tssa.jp/courses-and-fees/">コース案内</a>
+										<ul class="sub_f_links pc">
+											<li><a href="https://tssa.jp/courses-and-fees/intensive">集中特訓コース</a></li>
+										</ul>
+									</li>
+									<li class="sp"><a href="https://tssa.jp/courses-and-fees/intensive">集中特訓コース</a></li>
+								</ul>
+							</div>
+							<div class="f_link_item">
+								<ul class="f_links">
+									<li class="pc"><a href="https://tssa.jp/career/">就職サポート</a></li>
+									<li><a href="https://tssa.jp/instructors/">講師紹介</a></li>
+									<li><a href="https://tssa.jp/faq/">よくある質問</a></li>
+									<li class="sp"><a href="https://tssa.jp/sushi-owners/">寿司店様へ</a></li>
+									<li class="sp"><a href="https://tssa.jp/company/">会社概要</a></li>
+								</ul>
+							</div>
+							<div class="f_link_item">
+								<ul class="f_links">
+									<li class="pc"><a href="https://tssa.jp/sushi-owners/">寿司店様へ</a></li>
+									<li class="pc"><a href="https://tssa.jp/company/">会社概要</a></li>
+									<li><a href="https://tssa.jp/terms/">利用規約</a></li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="f_bottom">
+				<div class="container">
+					<p class="copyright txt_center">© Copyright - Tokyo Sushi Shokunin Ikusei Academy Co., Ltd.</p>
+				</div>
+			</div>
+		</footer>
+    </div>
+	<script src="js/top.js"></script>
+	
+    <script src="js/gnav_sp.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>

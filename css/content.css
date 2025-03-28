@@ -1,0 +1,1753 @@
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
+
+/* tb_style03
+------------------------------------------------------------*/
+
+.tb_style03{
+	table-layout: fixed;
+	border-collapse: collapse;
+	border: 1px solid #c3c3c3;
+	border-right: 0;
+	border-bottom: 0;
+	background: #fff;
+}
+.tb_style03 th{
+	color: #fff;
+	background: #333;
+	width: 20%;
+}
+.tb_style03 th.emp{
+	background: #000;
+}
+.tb_style03 td.emp{
+	background: rgb(219 219 219 / 50%);
+}
+.tb_style03 th,
+.tb_style03 td{
+	padding: 18px 6px;
+	box-sizing: border-box;
+	text-align: center;
+	border-right: 1px solid #c3c3c3;
+	border-bottom: 1px solid #c3c3c3;
+	vertical-align: middle;
+}
+.tb_style03 td{
+	position: relative;
+	padding-top: 50px;
+}
+.tb_style03 tr td:first-of-type{
+	padding: 18px 6px;
+}
+.tb_style03 .tb_icon{
+	width: 28px;
+	display: block;
+	margin: 0 auto 5px;
+	position: absolute;
+	top: 18px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	height: 24px;
+}
+.tb_style03 .lrg{
+	font-size: 25px;
+	line-height: 1.2;
+}
+.tb_style03 .sm{
+	font-size: 10px;
+}
+.tb_style03 p{
+	line-height: 1.6;
+}
+
+
+/* main visual
+------------------------------------------------------------*/
+#mvisual{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	position: relative;
+	margin-top: 80px;
+	background-image: url('../img/mvisual.jpg');
+}
+/* .page_contact #mvisual{
+	background-image: url(../img/contact/mvisual.jpg);
+} 
+#mvisual::before{
+	content: "";
+    background: url(../img/index/mv_pattern.png) repeat top left;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+}*/
+#mvisual::after{
+	content: "";
+	position: absolute;
+	width: 242px;
+	height: 245px;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	background: url('../img/mv_deco.png') no-repeat center;
+	background-size: 100%;
+	z-index: 2;
+}
+#mvisual .mv_wrap{
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 290px;
+	justify-content: center;
+}
+#mvisual .mv_text{
+	color: #fff;
+    z-index: 3;
+	font-size: 36px;
+	font-weight: bold;
+    position: relative;
+    text-align: center;
+	letter-spacing: 1px;
+	text-shadow: 0 0 7px rgb(0 0 0 / 70%);
+}
+/* contact
+------------------------------------------------------------*/
+.page_contact #contact-sec,
+.page_sushi-owners #contact-sec{
+	padding: 60px 0 0;
+}
+.page_contact #contact-sec .tab_contact{
+	margin-top: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	border-left: 1px solid #111;
+}
+.page_contact #contact-sec .tab_contact li{
+	width: 33.333%;
+	box-sizing: border-box;
+}
+.page_contact #contact-sec .tab_contact li a{
+	display: block;
+	padding: 17px 10px;
+	text-align: center;
+	border-right: 1px solid #111;
+	border-top: 1px solid #111;
+	background: #fff;
+	color: #333;
+	transition: all ease .3s;
+	position: relative;
+}
+.page_contact #contact-sec .tab_contact li a.current::before{
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 0; 
+	height: 0; 
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #111;
+}
+.page_contact #contact-sec .tab_contact li a.current,
+.page_contact #contact-sec .tab_contact li a:hover {
+	background-color: #111;
+	color: #fff;
+}
+.page_contact #contact-sec .tab_contents_wrap{
+	background: url('../img/alt_bg.jpg') repeat center;
+    background-size: cover;
+	padding: 90px 0;
+	border-top: 1px solid #111;
+}
+.page_contact #contact-sec .container,
+.page_contact #contact-sec .tab_contents{
+	max-width: 1040px;
+	width: 95%;
+	margin: 0 auto;
+	scroll-margin-top: 1000vh;
+}
+.page_contact #contact-sec .tab_contents{
+	display: none;
+}
+.page_contact #contact-sec .tab_contents.current{
+	display: block;
+}
+.page_contact #contact-sec .tab_contents p{
+	margin-bottom: 20px;
+}
+#contact-sec .form_wrap .form_inner_wrap{
+	margin-bottom: 10px;
+}
+#contact-sec .form_wrap .form_inner_wrap:last-of-type{
+	margin-bottom: 0;
+}
+#contact-sec form .input_wrap {
+	margin-bottom: 30px;
+}
+#contact-sec form .input_wrap:last-of-type{
+	margin-bottom: 0;
+}
+#contact-sec form .input_wrap label {
+	display: block;
+	margin-bottom: 10px;
+}
+#contact-sec form .input_wrap label span {
+	position: relative;
+	display: inline-block;
+	padding-right: 10px;
+	font-weight: bold;
+}
+#contact-sec form .input_wrap label span.req::before {
+	content: '*';
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #ff0000;
+}
+#contact-sec form .input_wrap input,
+#contact-sec form .input_wrap textarea,
+#contact-sec form .input_wrap select {
+	padding: 16px;
+	width: 100%;
+	border: 1px solid #c4c4c4;
+	box-sizing: border-box;
+}
+#contact-sec form .input_wrap select {
+	-webkit-appearance: none;
+	appearance: none;
+	background: url('../img/ico_select.png') no-repeat right 20px center;
+	background-size: 18px;
+	padding: 16px 45px 16px 16px;
+}
+#contact-sec form .input_wrap .size_m{
+	max-width: 378px
+}
+#contact-sec form .input_wrap textarea {
+	height: 195px;
+}
+#contact-sec form .input_wrap input::placeholder,
+#contact-sec form .input_wrap textarea::placeholder {
+	color: rgba(0, 0, 0, .5);
+	font-size: 14px;
+}
+#contact-sec form .input_wrap input:focus,
+#contact-sec form .input_wrap textarea:focus {
+	outline: 0;
+	border-color: #111;
+}
+#contact-sec .form_inner_wrap{
+	padding: 60px;
+	background: #fff;
+}
+#contact-sec .btn_wrap{
+	margin: 60px auto 0;
+}
+#contact-sec .btn_wrap > p{
+	position: relative;
+    text-align: center;
+    display: block;
+    padding: 6px 0;
+    opacity: 1;
+    max-width: 380px;
+    width: 100%;
+    transition: all ease .3s;
+	border: 0;
+	cursor: pointer;
+	background: transparent;
+	margin: 0 auto;
+}
+#contact-sec .btn{
+	background-color: #000;
+	background-image: url('../img/ico_arrow.png');
+	background-repeat: no-repeat;
+	background-position: right 40px center;
+	background-size: 8px;
+	color: #fff;
+	font-family: "Shippori Mincho", serif;
+	padding: 21px 20px;
+	display: block;
+	box-sizing: border-box;
+	font-size: 18px;
+	font-weight: bold;
+	width: 100%;
+	display: inline-block;
+	transition: all ease .3s;
+	border: 0;
+	cursor: pointer;
+}
+#contact-sec .radio_list li{
+	display: inline-block;
+}
+/* Radio button */
+#contact-sec .radio_list li .radio_wrap {
+	display: block;
+	position: relative;
+	padding-left: 30px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin: 0 10px 0 0;
+}
+/* Hide the browser's default radio button */
+#contact-sec .radio_list li .radio_wrap input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	padding: 0;
+	border: 0;
+}
+/* Create a custom radio button */
+#contact-sec .radio_list li .checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 23px;
+	width: 23px;
+	border: 1px solid #c4c4c4;
+	border-radius: 50%;
+	padding: 0;
+}
+/* On mouse-over, add a grey background color */
+#contact-sec .radio_list li .radio_wrap:hover input ~ .checkmark {
+	background-color: #fff;
+}
+
+/* When the radio button is checked, add a blue background */
+#contact-sec .radio_list li .radio_wrap input:checked ~ .checkmark {
+	background-color: #fff;
+}
+/* Create the indicator (the dot/circle - hidden when not checked) */
+#contact-sec .radio_list li .radio_wrap .checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+/* Show the indicator (dot/circle) when checked */
+#contact-sec .radio_list li .radio_wrap input:checked ~ .checkmark:after {
+	display: block;
+}
+/* Style the indicator (dot/circle) */
+#contact-sec .radio_list li .radio_wrap .checkmark:after {
+	top: 4px;
+    left: 4px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #111;
+}
+.page_contact .tit_contact{
+	font-size: 24px;
+	font-weight: bold;
+	color: #000;
+	margin-bottom: 20px;
+}
+.page_contact #contact-sec .allergy_case{
+	display: flex;
+	align-items: center;
+	flex-wrap: nowrap;
+	justify-content: start;
+	gap: 20px;
+}
+.page_contact #contact-sec form .input_wrap .allergy_wrap label span{
+	font-weight: normal;
+	font-size: 16px;
+}
+.page_contact #contact-sec form .input_wrap .allergy_wrap p{
+	display: flex;
+    width: 600px;
+    align-items: center;
+}
+.page_contact #contact-sec form .input_wrap .allergy_case label{
+	margin: 0;
+}
+.page_contact #contact-sec form img{
+	margin-top: 20px;
+}
+
+.page_contact #contact-sec form select{
+	color: #222;
+}
+.page_contact #contact-sec form option{
+	color: #222;
+}
+.page_contact #autozip{
+	display: none!important;
+}
+.page_contact .wpcf7-spinner,
+.page_sushi-owners .wpcf7-spinner{
+    position: absolute;
+    top: -40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.page_contact .wpcf7 form.init .wpcf7-response-output,
+.page_contact .wpcf7 form.resetting .wpcf7-response-output,
+.page_contact .wpcf7 form.submitting .wpcf7-response-output,
+.page_sushi-owners .wpcf7 form.init .wpcf7-response-output,
+.page_sushi-owners .wpcf7 form.resetting .wpcf7-response-output,
+.page_sushi-owners .wpcf7 form.submitting .wpcf7-response-output{
+	padding: 10px;
+	text-align:center;
+}
+.page_contact #contact-sec form .input_wrap input[type="radio"]{
+	width: auto;
+}
+.page_contact .wpcf7-list-item{
+	margin: 0 15px 0 0;
+}
+#contact-sec .btn_wrap > p::before,
+#contact-sec .btn_wrap > p::after{
+	content: "";
+	position: absolute;
+	background: #000;
+	height: 1px;
+	width: 215px;
+	display: block;
+	transition: all ease .3s;
+}
+#contact-sec .btn_wrap > p::before{
+	top: 0;
+	left: 0;
+}
+#contact-sec .btn_wrap > p::after{
+	bottom: 0;
+	right: 0;
+}
+#contact-sec .btn_wrap > p:hover::before,
+#contact-sec .btn_wrap > p:hover::after{
+	width: 100%;
+}
+#contact-sec .btn_wrap .btn:hover{
+	background-color: #1a1a1a;
+}
+/* faq
+------------------------------------------------------------*/
+.page_faq .breadcrumbs{
+	background: url('../img/alt_bg.jpg') repeat top;
+	background-size: 2000px;
+}
+#faq-sec{
+	padding: 70px 0 100px;
+	background: url('../img/alt_bg.jpg') repeat top;
+	background-size: 2000px;
+}
+#faq-sec .faq_wrap dl{
+	margin-bottom: 20px;
+	background: #fff;
+}
+#faq-sec .faq_wrap dl dd,
+#faq-sec .faq_wrap dl dt{
+	position: relative;
+	padding: 26px 65px;
+	color: #000;
+}
+#faq-sec .faq_wrap dl dd::before,
+#faq-sec .faq_wrap dl dt::before{
+	position: absolute;
+	font-size: 24px;
+	font-weight: bold;
+	font-family: "Shippori Mincho", serif;
+	left: 30px;
+	top: 18px;
+}
+#faq-sec .faq_wrap dl dt::before{
+	content: "Q.";
+	top: 24px;
+}
+#faq-sec .faq_wrap dl dd::before{
+	content: "A.";
+}
+#faq-sec .faq_wrap dl dt{
+	font-size: 24px;
+	font-weight: bold;
+}
+#faq-sec .faq_wrap dl dd{
+	display: none;
+	border-top: 1px solid #ddd;
+}
+#faq-sec .faq_wrap dl dt::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	border-left: 1px solid #ddd;
+	bottom: 0;
+	width: 90px;
+	height: 90px;
+	background-image: url('../img/ico_plus.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 22px;
+	transition: all ease .3s;
+}
+#faq-sec .faq_wrap dl dt.active::after{
+	background-image: url('../img/ico_minus.png');
+}
+/* terms
+------------------------------------------------------------*/
+.page_terms #terms {
+	padding: 60px 0;
+}
+.page_terms .case .pack {
+	margin-bottom: 25px;
+	overflow: hidden;
+}
+.page_terms .case .pack .tit_terms {
+	margin-bottom: 10px;
+	color: #000;
+	font-size: 20px;
+	font-weight: bold;
+}
+.page_terms .case .pack .date {
+	margin-top: 10px;
+	float: right;
+	color: #000;
+	font-weight: bold;
+}
+.page_terms .case .pack .list_num01 {
+	padding-left: 25px;
+	list-style-type: decimal;
+}
+.page_terms .case .pack .list_num01 li {
+	margin-bottom: 5px;
+}
+.page_terms .case .pack .list_num-bracket {
+	padding-left: 30px;
+	counter-reset: list;
+}
+.page_terms .case .pack .list_num-bracket li {
+	position: relative;
+	margin-bottom: 5px;
+}
+.page_terms .case .pack .list_num-bracket li::before {
+    position: absolute;
+	content: " ("counter(list) ") ";
+    counter-increment: list;
+	left: -35px;
+	width: 30px;
+    text-align: right;
+}
+/* sushi owners
+------------------------------------------------------------*/
+.page_sushi-owners #contact-sec{
+	padding-bottom: 100px;
+}
+.page_sushi-owners #contact-sec .container{
+	max-width: 1040px;
+}
+.page_sushi-owners #contact-sec,
+.page_sushi-owners .breadcrumbs{
+	background: url('../img/alt_bg.jpg') repeat top;
+	background-size: 2000px;
+}
+.page_sushi-owners #contact-sec .txt_center{
+	color: #000000;
+	margin-bottom: 40px;
+}
+#contact-sec .terms_wrap{
+	text-align: center;
+	margin: 40px 0 20px;
+}
+.page_contact #contact-sec .terms_wrap p{
+	margin-bottom: 0;
+}
+.txt_link{
+	text-decoration: underline;
+	color: #2c16cb;
+}
+.txt_link:hover{
+	text-decoration: none;
+}
+.page_sushi-owners #contact-sec .btn_wrap{
+	margin-top: 40px;
+}
+.sp_break{
+	display: none;
+}
+/* page_company
+------------------------------------------------------------*/
+.page_company #company-sec{
+	padding-bottom: 0;
+}
+.page_company #company-sec .container{
+	max-width: 1040px;
+}
+.page_company .company_menu{
+	display: flex;
+	flex-wrap: wrap;
+	border-left: 1px solid #111;
+}
+.page_company .company_menu li{
+	width: 33.333%;
+	box-sizing: border-box;
+}
+.page_company .company_menu li a{
+	display: block;
+	padding: 17px 10px;
+	text-align: center;
+	border-right: 1px solid #111;
+	border-top: 1px solid #111;
+	background: #fff;
+	color: #333;
+	transition: all ease .3s;
+	position: relative;
+}
+.page_company .company_menu li a span{
+	display: inline-block;
+	background-image: url('../img/ico_arrow01.png');
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 18px;
+	padding-right: 25px;
+}
+.page_company .company_menu li a:hover {
+	background-color: #111;
+	color: #fff;
+}
+.page_company .company_menu li a:hover span{
+	background-image: url('../img/ico_arrow01_hov.png');
+}
+.page_company #profile{
+	padding: 90px 0;
+	background: url('../img/alt_bg.jpg') repeat top;
+	background-size: 2000px;
+	border-top: 1px solid #111;
+}
+.tb_style01{
+	border-collapse: collapse;
+	table-layout: fixed;
+	border: 1px solid #c3c3c3;
+	border-bottom: 0;
+	background: #fff;
+	width: 100%;
+}
+.tb_style01 th,
+.tb_style01 td{
+	padding: 14px 30px;
+	border-bottom: 1px solid #c3c3c3;
+	box-sizing: border-box;
+}
+.tb_style01 th{
+	background: #333;
+	color: #fff;
+	font-weight: bold;
+	vertical-align: middle;
+	text-align: left;
+	width: 260px;
+}
+.page_company #philosophy{
+	padding: 90px 0;
+}
+.page_company #philosophy .case{
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row-reverse;
+	align-items: center;
+	gap: 30px;
+}
+.page_company #philosophy .case img{
+	width: 490px;
+}
+.page_company #philosophy .case .tit_sec{
+	font-weight: bold;
+}
+.page_company #philosophy .case .pack{
+	width: calc( 100% - 520px );
+}
+.page_company #message{
+	padding: 90px 0;
+	background: url('../img/alt_bg.jpg') repeat top;
+	background-size: 2000px;
+}
+.page_company #message img{
+	margin-bottom: 30px;
+	box-shadow: 0 0 20px 10px rgb(0 0 0 / 10%);
+}
+.page_company #message .txt_right{
+	font-size: 28px;
+	font-weight: bold;
+	text-align: right;
+	display: block;
+	color: #111;
+	line-height: 1.6;
+}
+.page_company #message .txt_right .sm{
+	font-size: 20px;
+	display: block;
+}
+/* page_instructors
+------------------------------------------------------------*/
+.page_instructors #instructors-sec .container{
+	max-width: 1040px;
+}
+.page_instructors #instructors-sec .case{
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 40px;
+	flex-direction: row-reverse;
+	align-items: flex-start;
+}
+.page_instructors #instructors-sec .case img{
+	width: 490px;
+}
+.page_instructors #instructors-sec .case .pack{
+	width: calc( 100% - 530px);
+}
+.page_instructors #instructors-sec .tb_style01{
+	margin-top: 20px;
+}
+.page_instructors #instructors-sec .tb_style01 th{
+	width: 125px;
+}
+.page_instructors #instructors-sec .tit_sec{
+	font-size: 32px;
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+.page_instructors #instructors-sec .tit_sec .sm{
+	font-size: 22px;
+	margin-right: 20px;
+}
+.page_instructors #instructors-sec .tb_style01 th,
+.page_instructors #instructors-sec .tb_style01 td{
+	padding: 14px 15px;
+	font-size: 14px;
+}
+/* page_career
+------------------------------------------------------------*/
+.page_career #support .img_wrap {
+	position: relative;
+	padding: 0 20px 20px 0;
+	margin-bottom: 30px;
+}
+.page_career #support .img_wrap::before {
+	content: "";
+    position: absolute;
+	top: 20px;
+	left: 20px;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: url('../img/img_bg.jpg') no-repeat center / cover;
+}
+.page_career #support .img_wrap img {
+	max-width: 1020px;
+}
+.page_career #support p {
+	text-align: center;
+}
+.page_career #achievements .txt_center {
+	margin-bottom: 30px;
+}
+.page_career #achievements .case .pack {
+	position: relative;
+	padding-bottom: 50px;
+	margin-bottom: 40px;
+	overflow: hidden;
+	background: url('../img/ico_border.png') no-repeat bottom center / contain;
+}
+.page_career #achievements .case .pack:last-child {
+	padding-bottom: 0;
+	margin-bottom: 0;
+	background-image: none;
+}
+.page_career #achievements .case .pack .img_wrap {
+	margin-right: 30px;
+	float: left;
+	max-width: 360px;
+	width: 35%;
+}
+.page_career #achievements .case .pack .pack_content {
+	overflow: hidden;
+}
+.page_career #achievements .case .pack .pack_content .pack_wrap {
+	margin-bottom: 5px;
+}
+.page_career #achievements .case .pack .pack_content .pack_wrap:last-child {
+	margin-bottom: 0;
+}
+.page_career #achievements .case .pack .pack_content .pack_wrap .tit_achievements {
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+	font-family: "Shippori Mincho", serif;
+	border-bottom: 1px solid #000;
+}
+.page_career #achievements .case .pack .pack_content .pack_wrap .tit_achievements .tit_name {
+	display: inline-block;
+	padding: 0 3px;
+	color: #fff;
+	font-weight: 800;
+	background-color: #000;
+}
+.page_career #achievements .case .pack .pack_content .pack_wrap .tit_achievements .tit_name02 {
+	display: block;
+	font-size: 26px;
+	font-weight: 600;
+}
+.page_career #achievements .case .pack .pack_content .pack_wrap h4 {
+	font-size: 20px;
+	font-weight: 600;
+}
+/* page_kengaku
+------------------------------------------------------------*/
+.page_kengaku #kengaku-sec{
+	padding-bottom: 0;
+}
+.page_kengaku #kengaku-sec .container{
+	max-width: 1040px;
+}
+.page_kengaku .kengaku_menu{
+	display: flex;
+	flex-wrap: wrap;
+	border-left: 1px solid #111;
+	margin-top: 60px;
+}
+.page_kengaku .kengaku_menu li{
+	width: 50%;
+	box-sizing: border-box;
+}
+.page_kengaku .kengaku_menu li a{
+	display: block;
+	padding: 17px 10px;
+	text-align: center;
+	border-right: 1px solid #111;
+	border-top: 1px solid #111;
+	background: #fff;
+	color: #333;
+	transition: all ease .3s;
+	position: relative;
+}
+.page_kengaku .kengaku_menu li a:hover{
+	background-color: #111;
+	color: #fff;
+}
+.page_kengaku .kengaku_menu li a.current{
+	background-color: #111;
+	color: #fff;
+}
+.page_kengaku .kengaku_menu  li a.current::before{
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 20px solid #111;
+}
+.page_kengaku #admissions,
+.page_kengaku #observation{
+	padding: 90px 0;
+	background: url('../img/alt_bg.jpg') repeat top;
+	background-size: 2000px;
+	border-top: 1px solid #111;
+}
+.page_kengaku #kengaku-sec .img_wrap{
+	max-width: 754px;
+	width: 100%;
+	margin: 30px auto 40px;
+	display: block;
+}
+.page_kengaku #kengaku-sec .tb_style01{
+	margin-bottom: 40px;
+}
+.page_kengaku #kengaku-sec .box_emp_wrap{
+	border: 5px solid #fff;
+	text-align: center;
+}
+.page_kengaku #kengaku-sec .box_emp_wrap .box_emp_wrap_inner{
+	background-color: #fff;
+	background-image: url('../img/deco_box.png');
+	background-repeat: no-repeat;
+	background-position: top right;
+	background-size: 222px;
+	padding: 30px 10px;
+}
+.page_kengaku #kengaku-sec .box_emp_wrap .tit_box{
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+.page_kengaku #kengaku-sec .box_emp_wrap .txt_list{
+	margin-bottom: 30px;
+}
+.page_kengaku #kengaku-sec .tab_content{
+	display: none;
+}
+.page_kengaku #kengaku-sec .tab_content.current{
+	display: block;
+}
+/* page_access
+------------------------------------------------------------*/
+.page_access .point{
+	padding: 60px 0;
+	position: relative;
+}
+.page_access .point::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	background: url('../img/bg_deco.jpg') repeat top;
+	background-size: 100%;
+	max-width: 725px;
+	width: 45%;
+	z-index: -1;
+}
+.page_access .point.point_reverse::before{
+	left: unset;
+    right: 0;
+}
+.page_access .point .case{
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 45px;
+	align-items: center;
+}
+.page_access .point.point_reverse .case{
+	flex-direction: row-reverse;
+}
+.page_access .point img{
+	width: 652px;
+}
+.page_access .point .pack{
+	width: calc( 100% - 697px);
+}
+.page_access .point .tit_point_wrap{
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	margin-bottom: 30px;
+}
+.page_access .point .point_num{
+	display: flex;
+    flex-wrap: nowrap;
+}
+.page_access .point .point_num .point_txt{
+	font-family: "Shippori Mincho", serif;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 48px;
+    color: #111;
+    border: 1px solid #111;
+    border-right: 0;
+    box-sizing: border-box;
+    height: 50px;
+	width: 50px;
+    text-align: center;
+	width: 120px;
+    text-align: center;
+}
+.page_access .point .point_num .num{
+	font-size: 50px;
+    background: #111;
+    color: #fff;
+    line-height: 50px;
+    height: 50px;
+	width: 50px;
+    text-align: center;
+}
+.page_access .point .tit_point{
+	font-size: 30px;
+	font-weight: 600;
+	color: #111;
+}
+.page_access #comparison{
+	background: url('../img/alt_bg.jpg') repeat top;
+	background-size: 2000px;
+}
+/* Enable and style scrollbar for a specific section */
+.page_access .tb_wrap {
+	overflow-x: scroll; /* or overflow: scroll; */
+}
+
+/* Custom scrollbar for .scrollable-section */
+.page_access .tb_wrap::-webkit-scrollbar {
+	display: block; /* Make it visible */
+	width: 8px;
+}
+
+.page_access .tb_wrap::-webkit-scrollbar-thumb {
+	background: #888; /* Scrollbar color */
+	border-radius: 4px;
+}
+.page_access .tb_wrap::-webkit-scrollbar-track {
+	background:transparent;
+}
+
+.page_access .tb_style03{
+	margin-top: 30px;
+	width: 1200px;
+}
+.page_access .tb_style03 tr.txt_left td p{
+	text-align: left;
+	display: inline-flex;
+}
+.page_access .tb_style03 tr.txt_left td:first-of-type{
+	text-align: center;
+}
+.page_access #access .case{
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 40px;
+	align-items: flex-start;
+}
+.page_access #access .case .map_wrap{
+	width: 652px;
+	position: relative;
+	padding-top: 35%;
+}
+.page_access #access .case .map_wrap iframe{ 
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right: 0;
+}
+.page_access #access .case .pack{
+	width: calc( 100% - 692px );
+	margin-top: 15px;
+}
+.page_access #access .case .pack .tit_sec{
+	margin-bottom: 15px;
+}
+.page_access #access .case .pack .item{
+	margin-bottom: 20px;
+}
+/* page_courses-and-fees
+------------------------------------------------------------*/
+.page_courses-and-fees .section{
+	padding: 90px 0;
+}
+.page_courses-and-fees  .courses_menu{
+	display: flex;
+	flex-wrap: wrap;
+	border-left: 1px solid #111;
+}
+.page_courses-and-fees  .courses_menu li{
+	width: 25%;
+	box-sizing: border-box;
+}
+.page_courses-and-fees  .courses_menu li a{
+	display: block;
+	padding: 17px 10px;
+	text-align: center;
+	border-right: 1px solid #111;
+	border-top: 1px solid #111;
+	background: #fff;
+	color: #333;
+	transition: all ease .3s;
+	position: relative;
+}
+.page_courses-and-fees  .courses_menu li a span{
+	display: inline-block;
+	background-image: url('../img/ico_arrow01.png');
+	background-repeat: no-repeat;
+	background-position: right center;
+	background-size: 18px;
+	padding-right: 25px;
+}
+.page_courses-and-fees  .courses_menu li a:hover {
+	background-color: #111;
+	color: #fff;
+}
+.page_courses-and-fees  .courses_menu li a:hover span{
+	background-image: url('../img/ico_arrow01_hov.png');
+}
+.page_courses-and-fees #information{
+	border-top: 1px solid #111;
+}
+.page_courses-and-fees #information,
+.page_courses-and-fees #tuition{
+	background: url('../img/alt_bg.jpg') repeat top;
+	background-size: 2000px;
+}
+.page_courses-and-fees #information .bnr_link{
+	max-width: 487px;
+	width: 100%;
+	margin: 0 auto 30px;
+	display: block;
+}
+.page_courses-and-fees #information .tb_style01{
+	margin-top: 30px;
+}
+.page_courses-and-fees #information .txt_link{
+	text-align: center;
+	display: block;
+	margin-top: 20px;
+}
+.page_courses-and-fees #information .txt_link span{
+	display: inline-block;
+	padding-right: 20px;
+	background: url('../img/ico_arrow03.png') no-repeat right center;
+	background-size: 8px;
+	text-decoration: underline;
+}
+.page_courses-and-fees #information .txt_link:hover span{
+	text-decoration: none;
+}
+.page_courses-and-fees #features .case{
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 40px;
+	flex-direction:row-reverse;
+	align-items: center;
+}
+.page_courses-and-fees #features .case img{
+	width: 490px;
+}
+.page_courses-and-fees #features .case .pack{
+	width: calc( 100% - 530px);
+}
+.page_courses-and-fees #features .case .pack .tit_sec{
+	margin-bottom: 20px;
+}
+.page_courses-and-fees #tuition .txt_center{
+	margin-bottom: 30px;
+	color: #000;
+}
+.page_courses-and-fees #loans .tb_style03{
+	width: 100%;
+	margin-top: 30px;
+}
+.page_courses-and-fees #loans .tb_style03 th{
+	width: 50%;
+}
+.page_courses-and-fees #loans .tb_style03 td{
+	padding: 18px 6px;
+}
+.page_courses-and-fees #loans .txt_big{
+	font-size: 26px;
+	font-weight: 500;
+}
+.page_courses-and-fees #loans .txt_big .sm{
+	font-size: 16px;
+}
+.page_courses-and-fees #courses-sec{
+	padding-bottom: 0;
+}
+/* page_intensive
+------------------------------------------------------------*/
+.page_intensive .section{
+	padding: 90px 0;
+}
+.page_intensive .section.alt_section{
+	background: url('../img/alt_bg.jpg') repeat top;
+	background-size: 2000px;
+}
+.page_intensive .section .case{
+	display: flex;
+	flex-wrap: nowrap;
+	gap: 40px;
+	flex-direction:row-reverse;
+	align-items: center;
+}
+.page_intensive .section .case img{
+	width: 490px;
+}
+.page_intensive .section .case .pack{
+	width: calc( 100% - 530px);
+}
+.page_intensive .section .case .tit_sub{
+	text-align: left;
+}
+.page_intensive .section .tb_style03{
+	margin-top: 30px;
+	width: 1200px;
+}
+.page_intensive .section .tb_style03 th{
+	width: auto;
+}
+.page_intensive .section .tb_style03 td{
+	padding: 18px 6px;
+	height: 100px;
+	box-sizing: border-box;
+}
+/* Enable and style scrollbar for a specific section */
+.page_intensive .tb_wrap {
+	overflow-x: scroll; /* or overflow: scroll; */
+}
+
+/* Custom scrollbar for .scrollable-section */
+.page_intensive .tb_wrap::-webkit-scrollbar {
+	display: block; /* Make it visible */
+	width: 8px;
+}
+
+.page_intensive .tb_wrap::-webkit-scrollbar-thumb {
+	background: #888; /* Scrollbar color */
+	border-radius: 4px;
+}
+.page_intensive .tb_wrap::-webkit-scrollbar-track {
+	background:transparent;
+}
+.page_intensive #tuition .tb_style03{
+	width: 100%;
+}
+.page_intensive #tuition .tb_style03 td{
+	height: auto;
+	font-size: 25px;
+} 
+.page_intensive #tuition .tuition_case{
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 50px;
+}
+.page_intensive #tuition .tuition_case .pack{
+	width: 50%;
+}
+.page_intensive #tuition .tuition_case .tit_sub{
+	text-align: left;
+}
+.page_intensive #flow .txt_center{
+	margin-bottom: 30px;
+}
+.page_intensive #flow img{
+	box-shadow: 0 0 20px 10px rgb(0 0 0 / 10%);
+}
+.page_intensive #flow .btn{
+	margin: 40px auto 0;
+}
+.list_style02 li{
+	padding: 10px 0 10px 30px;
+	background: url('../img/border_pattern.jpg') repeat-x bottom left;
+	position: relative;
+	font-size: 18px;
+}
+.list_style02 li::before{
+	content: "";
+	position: absolute;
+	top: 18px;
+	left: 10px;
+	background: url('../img/ico_diamod.png') no-repeat center;
+	background-size: 100%;
+	width: 6px;
+	height: 7px;
+}
+.list_style02 li:last-child{
+	background: none;
+}
+@media screen and ( max-width : 980px ) {
+	.page_contact #contact-sec .allergy_case{
+		display: block;
+	}
+	/* contact
+	------------------------------------------------------------*/
+	#contact-sec .allergy_case{
+		display: block;
+	}
+	/* page_instructors
+	------------------------------------------------------------*/
+	.page_instructors #instructors-sec .case img{
+		width: 350px;
+	}
+	.page_instructors #instructors-sec .case .pack{
+		width: calc( 100% - 390px);
+	}
+	/* page_access
+	------------------------------------------------------------*/
+	.page_access .point{
+		background-size: 500px;
+	}
+	.page_access .point img{
+		width: 420px;
+	}
+	.page_access .point .pack{
+		width: calc( 100% - 460px);
+	}
+	.page_access #access .case .map_wrap{
+		width: 420px;
+	}
+	.page_access #access .case .pack{
+		width: calc( 100% - 460px );
+	}
+	/* tb_style03
+	------------------------------------------------------------*/
+	.tb_style03 th, .tb_style03 td{
+		padding: 10px 5px;
+	}
+	.tb_style03 .tb_icon{
+		top: 8px;
+		width: 22px;
+		height: 20px;
+	}
+	.tb_style03 td{
+		padding-top: 35px;
+	}
+	/* page_courses-and-fees
+	------------------------------------------------------------*/
+	.page_courses-and-fees #features .case{
+		gap: 20px;
+	}
+	.page_courses-and-fees #features .case img{
+		width: 350px;
+	}
+	.page_courses-and-fees #features .case .pack{
+		width: calc( 100% - 370px);
+	}
+	/* page_intensive
+	------------------------------------------------------------*/
+	.page_intensive .section .case{
+		gap: 20px;
+	}
+	.page_intensive .section .case img{
+		width: 350px;
+	}
+	.page_intensive .section .case .pack{
+		width: calc( 100% - 370px);
+	}
+}
+@media screen and ( max-width : 768px ) {
+	/* main visual
+	------------------------------------------------------------*/
+	#mvisual::after{
+		width: 180px;
+		height: 182px;
+	}
+	#mvisual .mv_wrap{
+		height: 250px;
+	}
+	#mvisual .mv_text{
+		font-size: 180%;
+	}
+	/* contact
+	------------------------------------------------------------*/
+	.page_contact #contact-sec,
+	.page_sushi-owners #contact-sec{
+		padding: 30px 0 0;
+	}
+	.page_contact #contact-sec .tab_contact{
+		margin-top: 30px;
+	}
+	.page_contact #contact-sec .tab_contact li a{
+		padding: 13px 10px;
+	}
+	.page_contact #contact-sec .tab_contact li a.current::before{
+		bottom: -15px;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-top: 15px solid #111;
+	}
+	.page_contact #contact-sec .tab_contents_wrap{
+		padding: 45px 0;
+	}
+	.page_contact #contact-sec .tab_contents p{
+		margin-bottom: 10px;
+	}
+	#contact-sec form .input_wrap {
+		margin-bottom: 20px;
+	}
+	#contact-sec form .input_wrap input,
+	#contact-sec form .input_wrap textarea {
+		padding: 16px;
+		width: 100%;
+		border: 1px solid #979797;
+		box-sizing: border-box;
+	}
+	#contact-sec form .input_wrap input.size_m{
+		max-width: 350px;
+	}
+	#contact-sec form .input_wrap textarea {
+		height: 150px;
+	}
+	#contact-sec form .input_wrap input::placeholder,
+	#contact-sec form .input_wrap textarea::placeholder {
+		font-size: 100%;
+	}
+	#contact-sec .form_inner_wrap{
+		padding: 30px;
+	}
+	.page_contact #contact-sec .allergy_case{
+		flex-wrap: wrap;
+	}
+	.page_contact .tit_contact{
+		font-size: 140%;
+		margin-bottom: 12px;
+	}
+	.page_contact #contact-sec form .input_wrap .allergy_wrap p{
+		display: block;
+	}
+	/* faq
+	------------------------------------------------------------*/
+	#faq-sec{
+		padding: 50px 0;
+	}
+	#faq-sec .faq_wrap dl dt{
+		font-size: 120%;
+	}
+	#faq-sec .faq_wrap dl dd::before, #faq-sec .faq_wrap dl dt::before{
+		font-size: 120%;
+	}
+	#faq-sec .faq_wrap dl dd, #faq-sec .faq_wrap dl dt{
+		padding: 20px 75px 20px 45px;
+	}
+	#faq-sec .faq_wrap dl dd{
+		padding: 20px 20px 20px 45px;
+	}
+	#faq-sec .faq_wrap dl dt::before{
+		top: 17px;
+		left: 20px;
+	}
+	#faq-sec .faq_wrap dl dt::after{
+		width: 67px;
+		height: 100%;
+		background-size: 14px;
+	}
+	#faq-sec .faq_wrap dl dd::before{
+		left: 20px;
+	}
+	/* terms
+	------------------------------------------------------------*/
+	.page_terms #terms {
+		padding: 50px 0;
+	}
+	.page_terms .case .pack {
+		margin-bottom: 15px;
+	}
+	.page_terms .case .pack .tit_terms {
+		font-size: 120%;
+	}
+	.page_terms .case .pack .list_num01 {
+		padding-left: 20px;
+	}
+	.page_terms .case .pack .list_num-bracket {
+		padding-left: 25px;
+	}
+	.page_terms .case .pack .list_num-bracket li {
+		position: relative;
+		margin-bottom: 5px;
+	}
+	.sp_break{
+		display: block;
+	}
+	/* company
+	------------------------------------------------------------*/
+	.tb_style01 th{
+		width: 140px;
+	}
+	.tb_style01 th, .tb_style01 td{
+		padding: 12px 10px;
+	}
+	.page_company #profile,
+	.page_company #philosophy,
+	.page_company #message{
+		padding: 40px 0;
+	}
+	.page_company #philosophy .case{
+		gap: 5%;
+	}
+	.page_company #philosophy .case img{
+		width: 40%;
+	}
+	.page_company #philosophy .case .pack{
+		width: calc( 100% - 45% );
+	}
+	.page_company #message .txt_right{
+		font-size: 130%;
+	}
+	.page_company #message .txt_right .sm{
+		font-size: 80%;
+	}
+	/* page_instructors
+	------------------------------------------------------------*/
+	.page_instructors #instructors-sec .case{
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	.page_instructors #instructors-sec .case .pack,
+	.page_instructors #instructors-sec .case img{
+		width: 100%;
+	}
+	.page_instructors #instructors-sec .tit_sec{
+		font-size: 180%;
+		margin-bottom: 15px;
+	}
+	.page_instructors #instructors-sec .tit_sec .sm{
+		font-size: 80%;
+		margin-right: 10px;
+	}
+	.page_instructors #instructors-sec .tb_style01 th, .page_instructors #instructors-sec .tb_style01 td{
+		padding: 12px 10px;
+	}
+	.page_instructors #instructors-sec .tb_style01 th{
+		width: 95px;
+	}
+	/* page_career
+	------------------------------------------------------------*/
+	.page_career #support .img_wrap {
+		padding: 0 15px 15px 0;
+		margin-bottom: 20px;
+	}
+	.page_career #support .img_wrap::before {
+		top: 15px;
+		left: 15px;
+	}
+	.page_career #support p {
+		text-align: left;
+	}
+	.page_career #achievements .txt_center {
+		margin-bottom: 20px;
+	}
+	.page_career #achievements .case .pack {
+		padding-bottom: 30px;
+		margin-bottom: 20px;
+	}
+	.page_career #achievements .case .pack .img_wrap {
+		margin: 0 auto 30px;
+		float: none;
+		max-width: none;
+		width: 100%;
+	}
+	.page_career #achievements .case .pack .pack_content .pack_wrap .tit_achievements {
+		margin-bottom: 10px;
+	}
+	.page_career #achievements .case .pack .pack_content .pack_wrap .tit_achievements .tit_name02 {
+		font-size: 150%;
+	}
+	.page_career #achievements .case .pack .pack_content .pack_wrap h4 {
+		font-size: 130%;
+	}
+	/* page_access
+	------------------------------------------------------------*/
+	.page_access .point{
+		padding: 40px 0;
+	}
+	.page_access .point .case{
+		flex-wrap: wrap;
+		gap: 0;
+	}
+	.page_access .point img{
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto 20px;
+	}
+	.page_access .point .pack{
+		width: 100%;
+	}
+	.page_access .point .tit_point_wrap{
+		gap: 10px;
+	}
+	.page_access .point .point_num .point_txt{
+		font-size: 130%;
+        width: 60px;
+		height: 40px;
+        line-height: 40px;
+	}
+	.page_access .point .point_num .num{
+		font-size: 160%;
+		height: 40px;
+        line-height: 40px;
+        width: 40px;
+	}
+	.page_access .point .tit_point{
+		font-size: 130%;
+	}
+	.tb_style03 .lrg{
+		font-size: 130%;
+	}
+	.page_access #access .case{
+		flex-wrap: wrap;
+		gap: 0;
+	}
+	.page_access #access .case .map_wrap{
+		width: 100%;
+		padding-top: 80%;
+	}
+	.page_access #access .case .pack{
+		width: 100%;
+	}
+	.page_access .tb_style03{
+		width: 1000px;
+	}
+	.page_access .tb_style03{
+		margin-top: 15px;
+	}
+	.page_access .tb_wrap{
+		position: relative;
+	}
+	.page_access .tb_wrap::before{
+		content: "";
+		position: absolute;
+		top: 100px;
+		right: 80px;
+		background: url('../img/ico_arrow04.png') no-repeat center;
+		background-size: 100%;
+		width: 50px;
+		height: 41px;
+		transition: all ease .3s;
+		opacity: 1;
+		z-index: 1;
+	}
+	.page_access .tb_wrap.touch-end::before{
+		opacity: 0;
+	}
+	/* page_kengaku
+	------------------------------------------------------------*/
+	.page_kengaku .kengaku_menu{
+		margin-top: 20px;
+	}
+	.page_kengaku #admissions,
+	.page_kengaku #observation{
+		padding: 45px 0;
+	}
+	.page_kengaku #kengaku-sec .box_emp_wrap .box_emp_wrap_inner{
+		background-size: 120px;
+		padding: 20px 10px;
+	}
+	.page_kengaku #kengaku-sec .img_wrap{
+		margin: 20px auto;
+	}
+	.page_kengaku #kengaku-sec .tb_style01{
+		margin-bottom: 20px;
+	}
+	.page_kengaku #kengaku-sec .box_emp_wrap .tit_box{
+		font-size: 120%;
+		margin-bottom: 15px;
+	}
+	.page_kengaku #kengaku-sec .box_emp_wrap .txt_list{
+		margin-bottom: 15px;
+	}
+	/* page_courses-and-fees
+	------------------------------------------------------------*/
+	.page_courses-and-fees .section{
+		padding: 45px 0;
+	}
+	.page_courses-and-fees #features .case{
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+	.page_courses-and-fees #features .case img{
+		width: 100%;
+	}
+	.page_courses-and-fees #features .case .pack{
+		width: 100%;
+	}
+	.page_courses-and-fees #features .case .pack .tit_sec {
+		margin-bottom: 15px;
+	}
+	.page_courses-and-fees #loans .txt_big{
+		font-size: 140%;
+	}
+	.page_courses-and-fees #loans .tb_style03 td{
+		padding: 10px 5px;
+	}
+	.page_courses-and-fees #loans .tb_style03{
+		margin-top: 15px;
+	}
+	.page_courses-and-fees .courses_menu li{
+		width: 50%;
+	}
+
+	/* page_intensive
+	------------------------------------------------------------*/
+	.page_intensive .section {
+		padding: 45px 0;
+	}
+	.page_intensive .section .case{
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+	.page_intensive .section .case img{
+		width: 100%;
+	}
+	.page_intensive .section .case .pack{
+		width: 100%;
+	}
+	.page_intensive #tuition .tb_style03 td{
+		font-size: 120%;
+	}
+	.page_intensive .section .tb_style03 td{
+		padding: 10px 5px;
+	}
+	.page_intensive #tuition .tuition_case .pack{
+		width: 100%;
+	}
+	.page_intensive #tuition .tuition_case{
+		flex-wrap: wrap;
+		gap: 15px;
+	}
+	.page_intensive #tuition .tb_style03{
+		margin-top: 10px;
+	}
+	.page_intensive #flow .txt_center{
+		margin-bottom: 15px;
+	}
+	.page_intensive .tb_wrap{
+		position: relative;
+	}
+	.page_intensive .tb_wrap::before{
+		content: "";
+		position: absolute;
+		top: 100px;
+		right: 80px;
+		background: url('../img/ico_arrow04.png') no-repeat center;
+		background-size: 100%;
+		width: 50px;
+		height: 41px;
+		transition: all ease .3s;
+		opacity: 1;
+		z-index: 1;
+	}
+	.page_intensive .tb_wrap.touch-end::before{
+		opacity: 0;
+	}
+	.page_intensive #flow .btn{
+		margin-top: 20px;
+	}
+	.list_style02 li{
+		font-size: 110%;
+	}
+}
+@media screen and ( max-width : 640px ) {
+	/* company
+	------------------------------------------------------------*/
+	.page_company #philosophy .case{
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+	.page_company #philosophy .case img{
+		width: 100%;
+	}
+	.page_company #philosophy .case .pack{
+		width: 100%;
+	}
+	/* page_instructors
+	------------------------------------------------------------*/
+	.page_instructors #instructors-sec .tit_sec{
+		font-size: 160%;
+	}
+	/* page_access
+	------------------------------------------------------------*/
+	.tb_style03 .lrg {
+        font-size: 120%;
+    }
+	.page_access #reasons{
+		padding-bottom: 0;
+	}
+	.page_access .point::before{
+		display: none;
+	}
+	.page_access .point.point_reverse::before{
+		width: 100%;
+		max-width: 100%;
+		display: block;
+	}
+	
+}

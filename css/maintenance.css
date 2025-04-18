@@ -1,0 +1,51 @@
+#maintenance-sec{
+    position: fixed;
+    width: 100%;
+    height: 80vh;
+    padding: 100px 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+#maintenance-sec .tit_maintenance{
+    margin-bottom: 12%;
+}
+#maintenance-sec .main-txt{
+    font-size: 64px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    color: #000;
+    margin-bottom: 25px;
+}
+#maintenance-sec .sub-txt{
+    font-size: 26px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    color: #000;
+}
+#maintenance-sec .btn{
+    margin: 0 auto;
+}
+#maintenance-sec .btn_list_cta{
+    margin: 30px 0 60px;
+}
+#maintenance-sec .sp_break{
+    display: none;
+}
+@media screen and ( max-width : 768px ) {
+    #maintenance-sec .main-txt{
+        font-size: 8vw;
+        margin-bottom: 10px;
+    }
+    #maintenance-sec .sub-txt{
+        font-size: 3.5vw;
+    }
+    #maintenance-sec .sp_break{
+        display: block;
+    }
+}

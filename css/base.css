@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap');
 
-html, body, div, span, applet, object,  h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
 	margin: 0;
@@ -78,7 +78,7 @@ section {
 	padding: 100px 0;
 }
 .alt_bg {
-	background: url(../img/alt_bg.jpg) repeat center;
+	background: url(../img/common/alt_bg.jpg) repeat center;
 	background-size: cover;
 }
 .container {
@@ -123,7 +123,7 @@ header .header_wrap{
 	width: 95%;
 	margin: 0 auto;
 	padding: 20px 0;
-	overflow: hidden;
+	/* overflow: hidden; */
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
@@ -142,6 +142,7 @@ header .header_wrap .header_menu{
 header .header_wrap .header_menu ul{
 	display: flex;
 	justify-content: flex-end;
+	align-items: center;
 }
 header .header_wrap .header_menu ul li a{
 	display: block;
@@ -158,7 +159,7 @@ header .header_wrap .header_menu ul li:last-child a{
 /* cta
 ------------------------------------------------------------*/
 .cta_sec{
-	background: url('../img/bg_cta.jpg') no-repeat center/cover;
+	background: url(../img/common/bg_cta.jpg) no-repeat center/cover;
 	padding: 80px 0;
 	color: #fff;
 	text-align: center;
@@ -172,7 +173,7 @@ header .header_wrap .header_menu ul li:last-child a{
 }
 .cta_sec .tel_link_wrap{
 	padding: 5px 0;
-	background: url('../img/cta_border.png') no-repeat center;
+	background: url(../img/common/cta_border.png) no-repeat center;
 	background-size: 444px;
 }
 .cta_sec .tel_link{
@@ -182,7 +183,7 @@ header .header_wrap .header_menu ul li:last-child a{
 	font-weight: bold;
 	color: #fff;
 	padding-left: 38px;
-	background: url('../img/ico_tel.png') no-repeat left top 16px/31px;
+	background: url(../img/common/ico_tel.png) no-repeat left top 16px/31px;
 	color: #fff;
 	text-decoration: none;
 }
@@ -200,7 +201,7 @@ header .header_wrap .header_menu ul li:last-child a{
 	transition: all ease .3s;
 	text-align: center;
 	opacity: 1;
-	background-image: url('../img/ico_arrow.png');
+	background-image: url(../img/common/ico_arrow.png);
 	background-repeat: no-repeat;
 	background-position: right 20px center;
 	background-size: 8px;
@@ -246,13 +247,13 @@ header .header_wrap .header_menu ul li:last-child a{
 	}
 }
 .btn_list_cta a.btn_cta01 span{
-	background-image: url('../img/ico_cta01.png');
+	background-image: url(../img/common/ico_cta01.png);
 }
 .btn_list_cta a.btn_cta02 span{
-	background-image: url('../img/ico_cta02.png');
+	background-image: url(../img/common/ico_cta02.png);
 }
 .btn_list_cta a.btn_cta03 span{
-	background-image: url('../img/ico_cta03.png');
+	background-image: url(../img/common/ico_cta03.png);
 }
 .btn_list_cta a:hover{
 	opacity: .7;
@@ -337,7 +338,7 @@ header .header_wrap .header_menu ul li:last-child a{
 }
 .btn span{
 	background-color: #000;
-	background-image: url('../img/ico_arrow.png');
+	background-image: url(../img/common/ico_arrow.png);
 	background-repeat: no-repeat;
 	background-position: right 40px center;
 	background-size: 8px;
@@ -415,7 +416,7 @@ footer .f_wrap .f_links li .sub_f_links li a{
 	display: table;
 	padding-left: 20px;
 	margin-bottom: 20px;
-	background: url('../img/ico_f_links.png') no-repeat left center/7px;
+	background: url(../img/common/ico_f_links.png) no-repeat left center/7px;
 }
 footer .f_wrap .f_links li .sub_f_links li:last-child a{
 	margin-bottom: 0;
@@ -901,11 +902,45 @@ footer .f_bottom .copyright{
 	}
 }
 
-iframe {
-    width: 100%;
-    height: 400px;
-    scrollbar-color: rgba(255, 255, 255, 0) rgba(255, 255, 255, 0);
-    overflow: hidden;
-    overflow-y: hidden;
-    border: none; /* Tùy chọn: Xóa viền của iframe */
+.custom-select {
+	position: relative;
+	cursor: pointer;
+	font-family: sans-serif;
+  }
+  
+.selected-option {
+	padding: 5px 25px;
+	border: 1px solid #ccc;
+	background: #fff;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.select-options li img{
+	width: 25px;
+}
+.selected-option img{
+	width: 25px;
+}
+header .header_wrap .header_menu ul.select-options {
+	display: none ;
+	position: absolute;
+	width: 100%;
+	top: 100%;
+	left: 0;
+	border: 1px solid #ccc;
+	background: #fff;
+	z-index: 10;
+	flex-direction: column;
+}
+
+.select-options li {
+	padding: 5px 10px;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.select-options li:hover {
+	background: #f0f0f0;
 }

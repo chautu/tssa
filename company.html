@@ -18,11 +18,10 @@
     <!-- javascript -->
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>	
 	<script src="js/common.js"></script>
-    <script src="js/faq.js"></script>
 	<script src="js/language.js"></script>
 	<script src="js/url.js"></script>
 </head>
-<body class="page page_faq page-faq">
+<body class="page page_company page-company">
     <div id="wrapper">
         <header class="fixed">
             <div class="header_wrap">
@@ -60,92 +59,124 @@
                 <div id="gnav_sp" class="sp">
                     <nav id="gnav">
                         <ul>
-                        <li><a key="school" href="access.html">学校案内</a></li>
-                        <li><a key="course" href="courses-and-fees.html">コース案内</a></li>
-                        <li><a key="placement" href="career.html">就職サポート</a></li>
-                        <li><a key="instructor" href="instructors.html">講師紹介</a></li>
-                        <li><a key="faq" href="faq.html">よくある質問</a></li>
-                        <li><a key="sushiOwners" href="sushi-owners.html">寿司店様へ</a></li>
+                        <li><a href="access.html">学校案内</a></li>
+                        <li><a href="courses-and-fees.html">コース案内</a></li>
+                        <li><a href="career.html">就職サポート</a></li>
+                        <li><a href="instructors.html">講師紹介</a></li>
+                        <li><a href="faq.html">よくある質問</a></li>
+                        <li><a href="sushi-owners.html">寿司店様へ</a></li>
                         </ul>
                     </nav>
                 </div>
+                
             </div>
         </header>
         <div id="mvisual">
             <div class="mv_wrap">
-                <h2 class="mv_text" key="faq">よくある質問</h2>
+                <h2 class="mv_text" key="company">会社概要</h2>
             </div>
         </div>
         <div class="breadcrumbs">
             <div class="container clearfix">
                 <ul>
                     <li><a href="index.html" key="home">ホーム</a></li>
-                    <li><span key="faq">よくある質問</span></li>
+                    <li><span key="company">会社概要</span></li>
                 </ul>
             </div>
         </div>
         <main>
             <article id="content">
-                <div id="faq-sec">
+                <section id="company-sec">
                     <div class="container">
-                        <div class="faq_wrap">
-                            <dl>
-                                <dt class="active" key="faq_dt1">卒業後のサポートはありますか？</dt>
-                                <dd style="display: block;" key="faq_dd1">当校の運営母体では国内外で広く人材事業、WEB事業、不動産事業等の運営もしております。国内外問わずご希望にそった就職、開業のサポートをさせていただきます。</dd>
-                            </dl>
-                            <dl>
-                                <dt key="faq_dt2">入学資格はありますか？</dt>
-                                <dd key="faq_dd2">ございません。しっかり学んで卒業後はしっかり稼いでください。</dd>
-                            </dl>
-                            <dl>
-                                <dt key="faq_dt3">調理経験が無くても大丈夫ですか？</dt>
-                                <dd key="faq_dd3">
-                                    当校では基礎から学んで頂きます。<br>
-                                    包丁の握り方、道具の手入れから学んで頂きます。<br>
-                                    また経験者の方々も普通は既製品に頼るようなものも手作り出来る様なカリキュラムを組んでおりますので新たな技術の習得が可能です。
-                                </dd>
-                            </dl>
-                            <dl>
-                                <dt key="faq_dt4">２ヶ月で寿司職人になれますか？</dt>
-                                <dd key="faq_dd4">技術はもちろん寿司職人としての心構えからカウンターでの所作、英語での料理説明等、現場で通用するレベルまで習得して頂きます。</dd>
-                            </dl>
-                            <dl>
-                                <dt key="faq_dt5">地方在住ですが、寮などの施設はありますか？</dt>
-                                <dd key="faq_dd5">寮などの施設はございませんが、当校運営母体が不動産事業等も運営していますのでご相談ください。</dd>
-                            </dl>
-                            <dl>
-                                <dt key="faq_dt6">学費の分割払いは可能ですか？</dt>
-                                <dd key="faq_dd6">ローンの取り扱いがございますのでお気軽にお問い合わせください。</dd>
-                            </dl>
-                            <dl>
-                                <dt key="faq_dt7">年齢制限はありますか？</dt>
-                                <dd key="faq_dd7">ありません。やる気と元気があれば大丈夫です。</dd>
-                            </dl>
-                            <dl>
-                                <dt key="faq_dt8">海外在住なのですが面談や見学は可能でしょうか？</dt>
-                                <dd key="faq_dd8">オンラインにて可能です。お気軽にお問い合わせください。</dd>
-                            </dl>
-                            <dl>
-                                <dt key="faq_dt9">日本語があまりできないないのですが入学可能でしょうか？</dt>
-                                <dd key="faq_dd9">
-                                    日本語ベースでの授業を行っていますが英語対応可能です。<br>
-                                    お気軽にお問い合わせください。
-                                </dd>
-                            </dl>
+                        <ul class="company_menu">
+                            <li><a href="#profile"><span key="company">会社概要</span></a></li>
+                            <li><a href="#philosophy"><span key="company_tab1">経営理念</span></a></li>
+                            <li><a href="#message"><span key="company_tab2">代表挨拶</span></a></li>
+                        </ul>
+                    </div>
+                    <div id="profile">
+                        <div class="container">
+                            <h2 class="tit_sub">
+                                <span class="tit_en">profile</span>
+                                <span class="tit_jp" key="company">会社概要</span>
+                            </h2>
+                            <table class="tb_style01">
+                                <tbody><tr>
+                                    <th key="company_name">名称</th>
+                                    <td key="company_name_txt">東京寿司職人アカデミー</td>
+                                </tr>
+                                <tr>
+                                    <th key="company_address">所在地</th>
+                                    <td>
+                                        <p key="company_address_txt">〒104-0061<br>東京都中央区銀座２丁目１１−１９国光ビル4階</p>
+                                        <a href="https://www.google.co.jp/maps/place/%E3%80%92104-0061+%E6%9D%B1%E4%BA%AC%E9%83%BD%E4%B8%AD%E5%A4%AE%E5%8C%BA%E9%8A%80%E5%BA%A7%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%91%EF%BC%91%E2%88%92%EF%BC%91%EF%BC%99+%E5%9B%BD%E5%85%89%E3%83%93%E3%83%AB+4%E9%9A%8E/@35.6726672,139.7665573,17z/data=!3m1!4b1!4m5!3m4!1s0x60188be169b9b251:0x2376aeb30132d2c7!8m2!3d35.6726672!4d139.7691322?hl=ja&amp;entry=ttu&amp;g_ep=EgoyMDI1MDIxMS4wIKXMDSoASAFQAw%3D%3D" class="txt_link" target="_blank" key="company_map">Google mapはこちら</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th key="company_access">アクセス</th>
+                                    <td key="company_access_txt">「銀座一丁目」駅徒歩1分<br>「銀座」駅徒歩5分</td>
+                                </tr>
+                                <tr>
+                                    <th>TEL・FAX</th>
+                                    <td><a href="tel:03-6278-7586" class="tel_num">03-6278-7586</a></td>
+                                </tr>
+                                <tr>
+                                    <th key="company_established">設立</th>
+                                    <td key="company_established_txt">2023年8月</td>
+                                </tr>
+                                <tr>
+                                    <th key="company_executives">役員</th>
+                                    <td key="company_executives_txt">代表  木村 太郎</td>
+                                </tr>
+                                <tr>
+                                    <th key="company_capital">資本金</th>
+                                    <td key="company_capital_txt">5,000万円</td>
+                                </tr>
+                                <tr>
+                                    <th key="company_affiliated">関連会社</th>
+                                    <td><a href="https://dym.asia/" class="txt_link" target="_blank" key="company_affiliated_txt">株式会社DYM</a></td>
+                                </tr>
+                            </tbody></table>
                         </div>
                     </div>
-                </div>
-                
-                <div class="cta_sec">
-                    <div class="container">
-                        <h2 class="tit_cta" key="course_loans_btn_title">資料請求　随時受付中！</h2>
-                        <div class="btn_list_cta">
-                            <a href="contact.html" class="btn_cta01"><span key="cta_sec_btn01">まずは資料請求（無料）</span></a>
-                            <a href="contact.html/#tab03" class="btn_cta02"><span key="btn_cta02">お問い合わせはこちら</span></a>
-                            <a href="contact.html/#tab02" class="btn_cta03"><span key="btn_cta03">入学願書申し込み</span></a>
+                    <div id="philosophy">
+                        <div class="container">
+                            <h2 class="tit_sub">
+                                <span class="tit_en">philosophy</span>
+                                <span class="tit_jp" key="company_tab1">経営理念</span>
+                            </h2>
+                            <div class="case">
+                                <img decoding="async" src="img/company/ph_company01.jpg" alt="寿司を通じて、あなたの人生を支えたい。">
+                                <div class="pack">
+                                    <h3 class="tit_sec" key="company_philosophy_title">寿司を通じて、あなたの人生を支えたい。</h3>
+                                    <p key="company_philosophy_content">「東京寿司職人育成アカデミー」は寿司の技術だけを教えるアカデミーではなく、生徒ひとりひとりの人生と共に生きることを考えたアカデミーです。一流の寿司店と大手人材会社をルーツに持つ「東京寿司職人育成アカデミー」では、卒業後のキャリアも最後まで支援させていただきます。</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div id="message">
+                        <div class="container">
+                            <h2 class="tit_sub">
+                                <span class="tit_en">message</span>
+                                <span class="tit_jp" key="company_message">代表講師挨拶</span>
+                            </h2>
+                            <div class="case">
+                                <img decoding="async" src="img/company/ph_company02.jpg" alt="代表講師挨拶">
+                                <div class="pack">
+                                    <p key="company_message_content">
+                                        当校では短期間で高級店、海外等の特殊な環境等どんなシチュエーションでもお客様に喜こんで頂き、稼げる職人を育てていきます。<br>
+                                        最近では既製の食品が増えガリやオボロ等作らなくなってきていますが自家製にこだわる高級店やそもそも既製品が手に入りにくい海外でも困らないようにしっかり学んで頂きます。<br>
+                                        入校された皆様には是非、本物の寿司を国内外問わず広めて色々なお客様に喜んで頂きしっかり稼いで欲しいです。
+                                    </p>
+                                    <p class="txt_right" key="company_message_content2">
+                                        <span class="sm">代表取締役</span>
+                                        木立 健太
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>    
             </article>
         </main>
 

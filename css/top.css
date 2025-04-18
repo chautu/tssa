@@ -1,7 +1,7 @@
 /* main visual
 ------------------------------------------------------------*/
 #mvisual{
-	background: url('../img/main_visual.jpg') no-repeat top 10% center / cover;
+	background: url(../img/index/main_visual.jpg) no-repeat top 10% center / cover;
 	height: 800px;
 	position: relative;
 	padding-top: 100px;
@@ -11,7 +11,7 @@
 }
 #mvisual::before{
 	content: "";
-	background: url('../img/mv_pattern.png') repeat top left;
+	background: url(../img/index/mv_pattern.png) repeat top left;
 	top: 0;
 	bottom: 0;
 	right: 0;
@@ -128,7 +128,7 @@
 /* academy
 ------------------------------------------------------------*/
 #academy{
-	background: url('../img/deco_brush02.png') no-repeat top right 16%;
+	background: url(../img/common/deco_brush02.png) no-repeat top right 16%;
 	background-size: 432px;
 }
 #academy .pack p{
@@ -171,7 +171,7 @@
     right: -60px;
     bottom: 0;
     z-index: -1;
-    background: url('../img/img_bg.jpg') no-repeat center / cover;
+    background: url(../img/index/img_bg.jpg) no-repeat center / cover;
 }
 #academy .dots{
 	position: absolute;
@@ -227,7 +227,7 @@
 	bottom: 0;
 }
 .case_style01 .pack{
-	background-image: url('../img/deco_brush.png');
+	background-image: url(../img/common/deco_brush.png);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 392px;
@@ -285,7 +285,7 @@
 	margin-top: 60px;
 }
 #enroll .enroll_links a{
-	background: url('../img/bg_enroll.jpg') repeat center/cover;
+	background: url(../img/index/bg_enroll.jpg) repeat center/cover;
 	color: #fff;
 	display: block;
 	padding: 40px 40px;
@@ -309,12 +309,12 @@
 #enroll .enroll_links a span{
 	font-size: 18px;
 	padding-right: 20px;
-	background: url('../img/ico_arrow.png') no-repeat right center/ 8px;
+	background: url(../img/common/ico_arrow.png) no-repeat right center/ 8px;
 }
 /* strength
 ------------------------------------------------------------*/
 #strengths{
-	background: url('../img/deco_brush02.png') no-repeat top right 16%, url('../img/alt_bg.jpg') repeat top;
+	background: url(../img/common/deco_brush02.png) no-repeat top right 16%, url(../img/common/alt_bg.jpg) repeat top;
 	background-size: 432px, contain;
 }
 .strengths_list{
@@ -339,7 +339,7 @@
 /* news
 ------------------------------------------------------------*/
 #news{
-	background: url('../img/deco_brush02.png') no-repeat top right 16%;
+	background: url(../img/common/deco_brush02.png) no-repeat top right 16%;
 	background-size: 432px;
 }
 .news_list{
@@ -350,7 +350,7 @@
 	padding: 20px 0;
 	width: 100%;
 	box-sizing: border-box;
-	background: url('../img/border_pattern.jpg') repeat-x bottom left;
+	background: url(../img/index/border_pattern.jpg) repeat-x bottom left;
 	background-color: #fff;
 	transition: all ease .3s;
 }
@@ -377,7 +377,7 @@
 .news_list li a p{
 	display: table-cell;
 	width: calc(100% - 266px);
-	background: url('../img/ico_arrow02.png') no-repeat right center/8px;
+	background: url(../img/common/ico_arrow02.png) no-repeat right center/8px;
 	padding-right: 30px;
 	box-sizing: border-box;
 	float: left;
@@ -388,7 +388,7 @@
 /* column
 ------------------------------------------------------------*/
 #column{
-	background: url('../img/deco_brush02.png') no-repeat top right 16%, url('../img/alt_bg.jpg') repeat top;
+	background: url(../img/common/deco_brush02.png) no-repeat top right 16%, url(../img/common/alt_bg.jpg) repeat top;
 	background-size: 432px, cover;
 }
 #column .column_list{
@@ -438,7 +438,7 @@
 }
 #column .column_list .case .link_wrap span{
 	padding-right: 20px;
-	background: url('../img/ico_arrow02.png') no-repeat right center/8px;
+	background: url(../img/common/ico_arrow02.png) no-repeat right center/8px;
 }
 #column .btn{
 	margin: 0 auto;
@@ -462,7 +462,7 @@
 /* faq
 ------------------------------------------------------------*/
 #faq{
-	background: url('../img/deco_brush02.png') no-repeat top right 16%, url('../img/alt_bg.jpg') repeat top;
+	background: url(../img/common/deco_brush02.png) no-repeat top right 16%, url(../img/common/alt_bg.jpg) repeat top;
 	background-size: 432px, 2000px;
 }
 #faq .faq_wrap dl{
@@ -508,14 +508,14 @@
 	bottom: 0;
 	width: 90px;
 	height: 90px;
-	background-image: url('../img/ico_plus.png');
+	background-image: url(../img/common/ico_plus.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 22px;
 	transition: all ease .3s;
 }
 #faq .faq_wrap dl dt.active::after{
-	background-image: url('../img/ico_minus.png');
+	background-image: url(../img/common/ico_minus.png);
 }
 #faq .btn{
 	margin: 40px auto 0;
@@ -765,7 +765,7 @@
 		height: 600px;
 		padding-top: 40px;
 		background-position: left 50% center;
-		background-image: url('../img/main_visual_sp.jpg');
+		background-image: url(../img/index/main_visual_sp.jpg);
 	}
 	#mvisual .mv_top_text{
 		font-size: 105%;

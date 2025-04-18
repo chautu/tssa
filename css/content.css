@@ -69,7 +69,7 @@
 	background-size: cover;
 	position: relative;
 	margin-top: 80px;
-	background-image: url('../img/mvisual.jpg');
+	background-image: url(../img/common/mvisual.jpg);
 }
 /* .page_contact #mvisual{
 	background-image: url(../img/contact/mvisual.jpg);
@@ -94,7 +94,7 @@
 	left: 0;
 	bottom: 0;
 	margin: auto;
-	background: url('../img/mv_deco.png') no-repeat center;
+	background: url(../img/common/mv_deco.png) no-repeat center;
 	background-size: 100%;
 	z-index: 2;
 }
@@ -161,7 +161,7 @@
 	color: #fff;
 }
 .page_contact #contact-sec .tab_contents_wrap{
-	background: url('../img/alt_bg.jpg') repeat center;
+	background: url(../img/common/alt_bg.jpg) repeat center;
     background-size: cover;
 	padding: 90px 0;
 	border-top: 1px solid #111;
@@ -222,7 +222,7 @@
 #contact-sec form .input_wrap select {
 	-webkit-appearance: none;
 	appearance: none;
-	background: url('../img/ico_select.png') no-repeat right 20px center;
+	background: url(../img/contact/ico_select.png) no-repeat right 20px center;
 	background-size: 18px;
 	padding: 16px 45px 16px 16px;
 }
@@ -265,7 +265,7 @@
 }
 #contact-sec .btn{
 	background-color: #000;
-	background-image: url('../img/ico_arrow.png');
+	background-image: url(../img/common/ico_arrow.png);
 	background-repeat: no-repeat;
 	background-position: right 40px center;
 	background-size: 8px;
@@ -433,12 +433,12 @@
 /* faq
 ------------------------------------------------------------*/
 .page_faq .breadcrumbs{
-	background: url('../img/alt_bg.jpg') repeat top;
+	background: url(../img/common/alt_bg.jpg) repeat top;
 	background-size: 2000px;
 }
 #faq-sec{
 	padding: 70px 0 100px;
-	background: url('../img/alt_bg.jpg') repeat top;
+	background: url(../img/common/alt_bg.jpg) repeat top;
 	background-size: 2000px;
 }
 #faq-sec .faq_wrap dl{
@@ -484,14 +484,14 @@
 	bottom: 0;
 	width: 90px;
 	height: 90px;
-	background-image: url('../img/ico_plus.png');
+	background-image: url(../img/common/ico_plus.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 22px;
 	transition: all ease .3s;
 }
 #faq-sec .faq_wrap dl dt.active::after{
-	background-image: url('../img/ico_minus.png');
+	background-image: url(../img/common/ico_minus.png);
 }
 /* terms
 ------------------------------------------------------------*/
@@ -547,7 +547,7 @@
 }
 .page_sushi-owners #contact-sec,
 .page_sushi-owners .breadcrumbs{
-	background: url('../img/alt_bg.jpg') repeat top;
+	background: url(../img/common/alt_bg.jpg) repeat top;
 	background-size: 2000px;
 }
 .page_sushi-owners #contact-sec .txt_center{
@@ -604,7 +604,7 @@
 }
 .page_company .company_menu li a span{
 	display: inline-block;
-	background-image: url('../img/ico_arrow01.png');
+	background-image: url(../img/company/ico_arrow01.png);
 	background-repeat: no-repeat;
 	background-position: right center;
 	background-size: 18px;
@@ -615,11 +615,11 @@
 	color: #fff;
 }
 .page_company .company_menu li a:hover span{
-	background-image: url('../img/ico_arrow01_hov.png');
+	background-image: url(../img/company/ico_arrow01_hov.png);
 }
 .page_company #profile{
 	padding: 90px 0;
-	background: url('../img/alt_bg.jpg') repeat top;
+	background: url(../img/common/alt_bg.jpg) repeat top;
 	background-size: 2000px;
 	border-top: 1px solid #111;
 }
@@ -666,7 +666,7 @@
 }
 .page_company #message{
 	padding: 90px 0;
-	background: url('../img/alt_bg.jpg') repeat top;
+	background: url(../img/common/alt_bg.jpg) repeat top;
 	background-size: 2000px;
 }
 .page_company #message img{
@@ -738,7 +738,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    background: url('../img/img_bg.jpg') no-repeat center / cover;
+    background: url(../img/index/img_bg.jpg) no-repeat center / cover;
 }
 .page_career #support .img_wrap img {
 	max-width: 1020px;
@@ -754,7 +754,7 @@
 	padding-bottom: 50px;
 	margin-bottom: 40px;
 	overflow: hidden;
-	background: url('../img/ico_border.png') no-repeat bottom center / contain;
+	background: url(../img/career/ico_border.png) no-repeat bottom center / contain;
 }
 .page_career #achievements .case .pack:last-child {
 	padding-bottom: 0;
@@ -851,7 +851,7 @@
 .page_kengaku #admissions,
 .page_kengaku #observation{
 	padding: 90px 0;
-	background: url('../img/alt_bg.jpg') repeat top;
+	background: url(../img/common/alt_bg.jpg) repeat top;
 	background-size: 2000px;
 	border-top: 1px solid #111;
 }
@@ -870,7 +870,7 @@
 }
 .page_kengaku #kengaku-sec .box_emp_wrap .box_emp_wrap_inner{
 	background-color: #fff;
-	background-image: url('../img/deco_box.png');
+	background-image: url(../img/kengaku/deco_box.png);
 	background-repeat: no-repeat;
 	background-position: top right;
 	background-size: 222px;
@@ -902,7 +902,7 @@
 	bottom: 0;
 	left: 0;
 	margin: auto;
-	background: url('../img/bg_deco.jpg') repeat top;
+	background: url(../img/access/bg_deco.jpg) repeat top;
 	background-size: 100%;
 	max-width: 725px;
 	width: 45%;
@@ -967,7 +967,7 @@
 	color: #111;
 }
 .page_access #comparison{
-	background: url('../img/alt_bg.jpg') repeat top;
+	background: url(../img/common/alt_bg.jpg) repeat top;
 	background-size: 2000px;
 }
 /* Enable and style scrollbar for a specific section */
@@ -1057,7 +1057,7 @@
 }
 .page_courses-and-fees  .courses_menu li a span{
 	display: inline-block;
-	background-image: url('../img/ico_arrow01.png');
+	background-image: url(../img/company/ico_arrow01.png);
 	background-repeat: no-repeat;
 	background-position: right center;
 	background-size: 18px;
@@ -1068,14 +1068,14 @@
 	color: #fff;
 }
 .page_courses-and-fees  .courses_menu li a:hover span{
-	background-image: url('../img/ico_arrow01_hov.png');
+	background-image: url(../img/company/ico_arrow01_hov.png);
 }
 .page_courses-and-fees #information{
 	border-top: 1px solid #111;
 }
 .page_courses-and-fees #information,
 .page_courses-and-fees #tuition{
-	background: url('../img/alt_bg.jpg') repeat top;
+	background: url(../img/common/alt_bg.jpg) repeat top;
 	background-size: 2000px;
 }
 .page_courses-and-fees #information .bnr_link{
@@ -1095,7 +1095,7 @@
 .page_courses-and-fees #information .txt_link span{
 	display: inline-block;
 	padding-right: 20px;
-	background: url('../img/ico_arrow03.png') no-repeat right center;
+	background: url(../img/common/ico_arrow03.png) no-repeat right center;
 	background-size: 8px;
 	text-decoration: underline;
 }
@@ -1148,7 +1148,7 @@
 	padding: 90px 0;
 }
 .page_intensive .section.alt_section{
-	background: url('../img/alt_bg.jpg') repeat top;
+	background: url(../img/common/alt_bg.jpg) repeat top;
 	background-size: 2000px;
 }
 .page_intensive .section .case{
@@ -1227,7 +1227,7 @@
 }
 .list_style02 li{
 	padding: 10px 0 10px 30px;
-	background: url('../img/border_pattern.jpg') repeat-x bottom left;
+	background: url(../img/index/border_pattern.jpg) repeat-x bottom left;
 	position: relative;
 	font-size: 18px;
 }
@@ -1236,7 +1236,7 @@
 	position: absolute;
 	top: 18px;
 	left: 10px;
-	background: url('../img/ico_diamod.png') no-repeat center;
+	background: url(../img/common/ico_diamod.png) no-repeat center;
 	background-size: 100%;
 	width: 6px;
 	height: 7px;
@@ -1587,7 +1587,7 @@
 		position: absolute;
 		top: 100px;
 		right: 80px;
-		background: url('../img/ico_arrow04.png') no-repeat center;
+		background: url(../img/access/ico_arrow04.png) no-repeat center;
 		background-size: 100%;
 		width: 50px;
 		height: 41px;
@@ -1654,7 +1654,6 @@
 	.page_courses-and-fees .courses_menu li{
 		width: 50%;
 	}
-
 	/* page_intensive
 	------------------------------------------------------------*/
 	.page_intensive .section {
@@ -1697,7 +1696,7 @@
 		position: absolute;
 		top: 100px;
 		right: 80px;
-		background: url('../img/ico_arrow04.png') no-repeat center;
+		background: url(../img/access/ico_arrow04.png) no-repeat center;
 		background-size: 100%;
 		width: 50px;
 		height: 41px;

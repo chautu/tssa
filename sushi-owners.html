@@ -2,78 +2,84 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+    <title>東京寿司職人育成アカデミー｜一流の職人に学ぶ寿司教室</title>
+	<link rel="icon" href="img/favicon/cropped-sushi_favicon-32x32.png" sizes="32x32">
+	<link rel="icon" href="img/favicon/cropped-sushi_favicon-192x192.png" sizes="192x192">
+	<link rel="apple-touch-icon" href="img/favicon/cropped-sushi_favicon-180x180.png">
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <!-- css -->
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/content.css">
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.js"
-    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-    crossorigin="anonymous">
-</script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- javascript -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>	
+	<script src="js/common.js"></script>
+	<script src="js/language.js"></script>
+	<script src="js/url.js"></script>
 </head>
-<body class="page_sushi-owners">
+<body class="page page_sushi-owners page-sushi-owners">
     <div id="wrapper">
-        <header class="">
-			<div class="header_wrap">
-				<div id="logo">
-					<a href="index.html"><img src="img/logo.png" alt="一流の職人に学ぶ寿司教室"></a>
-				</div>
-				<nav class="header_menu pc">
-					<ul>
-						<li><a key="schoolGuide" href="access.html">学校案内</a></li>
-						<li><a key="courseInformation" href="courses-and-fees.html">コース案内</a></li>
-						<li><a key="employmentSupport" href="career.html">就職サポート</a></li>
-						<li><a key="lecturerIntroduction" href="instructors.html">講師紹介</a></li>
-						<li><a key="faq" href="faq.html">よくある質問</a></li>
-						<li><a key="sushiRestaurants"  href="sushi-owners.html">寿司店様へ</a></li>
-                        <li>
-                            <select id="languageSelect">
-                                <option key="languageJa" value="ja" selected="selected">日本語</option>
-                                <option key="languageEn" value="en" >英語　</option>
-                                
-                            </select>
+        <header class="fixed">
+            <div class="header_wrap">
+                <div id="logo">
+                    <a href="#/"><img src="img/common/logo.png" alt="一流の職人に学ぶ寿司教室"></a>
+                </div>
+                <nav class="header_menu pc">
+                    <ul>
+                        <li ><a key="school" href="access.html">学校案内</a></li>
+                        <li ><a key="course" href="courses-and-fees.html">コース案内</a></li>
+                        <li ><a key="placement" href="career.html">就職サポート</a></li>
+                        <li ><a key="instructor" href="instructors.html">講師紹介</a></li>
+                        <li ><a key="faq" href="faq.html">よくある質問</a></li>
+                        <li ><a key="sushiOwners" href="sushi-owners.html">寿司店様へ</a></li>
+                        <li >
+                            <div class="custom-select">
+                                <div class="selected-option">
+                                  <img src="img/language/ja.png" alt=""> 日本語
+                                </div>
+                                <ul class="select-options">
+                                  <li data-lang="ja"><img src="img/language/ja.png" alt=""> <span key="languageJa">日本語</span></li>
+                                  <li data-lang="en"><img src="img/language/en.png" alt=""> <span key="languageEn">英語</span></li>
+                                </ul>
+                            </div>
                         </li>
-					</ul>
-				</nav>
-				
-				<div id="trigger-menu" class="sp">
-					<span class="line"></span>
-					<span class="line"></span>
-					<span class="line"></span>
-				</div>
-				<div id="gnav_sp" class="sp">
-					<nav id="gnav">
-						<ul>
-						<li><a href="https://tssa.jp/access/">学校案内</a></li>
-						<li><a href="https://tssa.jp/courses-and-fees/">コース案内</a></li>
-						<li><a href="https://tssa.jp/career/">就職サポート</a></li>
-						<li><a href="https://tssa.jp/instructors/">講師紹介</a></li>
-						<li><a href="https://tssa.jp/faq/">よくある質問</a></li>
-						<li><a href="https://tssa.jp/sushi-owners/">寿司店様へ</a></li>
-						</ul>
-					</nav>
-				</div>
-				
-			</div>
-		</header>
+                        <!-- <li class="language_en " > -->
+                    </ul>
+                </nav>
+                
+                <div id="trigger-menu" class="sp">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+                <div id="gnav_sp" class="sp">
+                    <nav id="gnav">
+                        <ul>
+                        <li><a key="school" href="access.html">学校案内</a></li>
+                        <li><a key="course" href="courses-and-fees.html">コース案内</a></li>
+                        <li><a key="placement" href="career.html">就職サポート</a></li>
+                        <li><a key="instructor" href="instructors.html">講師紹介</a></li>
+                        <li><a key="faq" href="faq.html">よくある質問</a></li>
+                        <li><a key="sushiOwners" href="sushi-owners.html">寿司店様へ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
         <div id="mvisual">
             <div class="mv_wrap">
-                <h2 class="mv_text">寿司店様のお問い合わせフォーム</h2>
+                <h2 class="mv_text" key="sushi_owners_title">寿司店様のお問い合わせフォーム</h2>
             </div>
         </div>
         <div class="breadcrumbs">
             <div class="container clearfix">
                 <ul>
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><span>寿司店様のお問い合わせフォーム</span></li>
+                    <li><a href="index.html" key="home">ホーム</a></li>
+                    <li><span key="sushi_owners_title">寿司店様のお問い合わせフォーム</span></li>
                 </ul>
             </div>
         </div>
@@ -81,79 +87,100 @@
             <article id="content">
                 <div id="contact-sec">
                     <div class="container">
-                        <p class="txt_center">当校HPへの掲載や卒業生のご紹介などの<br class="sp_break">お問い合わせはこちらに記入してください。</p>
+                        <p class="txt_center"><span key="sushi_owners_txt1">当校HPへの掲載や卒業生のご紹介などの</span><br class="sp_break"><span key="sushi_owners_txt2">お問い合わせはこちらに記入してください。</span></p>
                         <div class="form_wrap">
-                            
-                <div class="wpcf7 js" id="wpcf7-f48-p46-o1" lang="ja" dir="ltr" data-wpcf7-id="48">
-                <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
-                <form action="/sushi-owners#wpcf7-f48-p46-o1" method="post" class="wpcf7-form init" aria-label="コンタクトフォーム" novalidate="novalidate" data-status="init">
-                <div style="display: none;">
-                <input type="hidden" name="_wpcf7" value="48">
-                <input type="hidden" name="_wpcf7_version" value="6.0.3">
-                <input type="hidden" name="_wpcf7_locale" value="ja">
-                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f48-p46-o1">
-                <input type="hidden" name="_wpcf7_container_post" value="46">
-                <input type="hidden" name="_wpcf7_posted_data_hash" value="">
-                <input type="hidden" name="_wpcf7_recaptcha_response" value="">
-                </div>
-                <div class="form_inner_wrap">
-                    <div class="input_wrap">
-                        <p><label><span class="req">会社名</span></label><span class="wpcf7-form-control-wrap" data-name="txt_cname"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="例：東京寿司職人アカデミー" value="" type="text" name="txt_cname"></span>
-                        </p>
-                    </div>
-                    <div class="input_wrap">
-                        <p><label><span class="req">お名前</span></label><span class="wpcf7-form-control-wrap" data-name="txt_name"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="例：田中太郎" value="" type="text" name="txt_name"></span>
-                        </p>
-                    </div>
-                    <div class="input_wrap">
-                        <p><label><span class="req">住所</span></label><span class="wpcf7-form-control-wrap" data-name="txt_address"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="例：東京都中央区銀座2丁目11-19国光ビル4階" value="" type="text" name="txt_address"></span>
-                        </p>
-                    </div>
-                    <div class="input_wrap">
-                        <p><label><span class="req">電話番号</span></label><span class="wpcf7-form-control-wrap" data-name="tel-num"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="例：03-6278-7586" value="" type="tel" name="tel-num"></span>
-                        </p>
-                    </div>
-                    <div class="input_wrap">
-                        <p><label><span class="req">メールアドレス</span></label><span class="wpcf7-form-control-wrap" data-name="txt_email"><input size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="例：example@example.com" value="" type="email" name="txt_email"></span>
-                        </p>
-                    </div>
-                    <div class="input_wrap">
-                        <p><label><span class="req">お問い合わせ内容</span></label><span class="wpcf7-form-control-wrap" data-name="select-inq"><select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="select-inq"><option value="選択してください">選択してください</option><option value="掲載について">掲載について</option><option value="採用について">採用について</option><option value="その他">その他</option></select></span>
-                        </p>
-                    </div>
-                    <div class="input_wrap">
-                        <p><label><span>備考</span></label><span class="wpcf7-form-control-wrap" data-name="textarea-msg"><textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="textarea-msg"></textarea></span>
-                        </p>
-                    </div>
-                </div>
-                <div class="terms_wrap">
-                    <p><a href="/terms/" class="txt_link">利用規約</a>を必ずお読み頂き、<br class="sp_break">同意するにチェックをいれてください。
-                    </p>
-                    <p><span class="wpcf7-form-control-wrap" data-name="checkbox-term"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"><span class="wpcf7-list-item first last"><label><input type="checkbox" name="checkbox-term[]" value="上記に同意する"><span class="wpcf7-list-item-label">上記に同意する</span></label></span></span></span>
-                    </p>
-                </div>
-                <div class="captcha_wrap">
-                <span class="wpcf7-form-control-wrap recaptcha" data-name="recaptcha"><span data-sitekey="6Lc8ncEqAAAAAFlKk3LdRngZxxB4YmFdmcJ_cCmk" data-align="center" class="wpcf7-form-control wpcf7-recaptcha g-recaptcha"></span>
-                <noscript>
-                    <div class="grecaptcha-noscript">
-                        <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lc8ncEqAAAAAFlKk3LdRngZxxB4YmFdmcJ_cCmk" frameborder="0" scrolling="no" width="310" height="430">
-                        </iframe>
-                        <textarea name="g-recaptcha-response" rows="3" cols="40" placeholder="reCaptcha レスポンスはこちら">
-                        </textarea>
-                    </div>
-                </noscript>
-                </span>
-                </div>
-                <div class="btn_wrap">
-                    <p><input class="wpcf7-form-control wpcf7-submit has-spinner btn" type="submit" value="送信"><span class="wpcf7-spinner"></span>
-                    </p>
-                </div><div class="wpcf7-response-output" aria-hidden="true"></div>
-                </form>
-                </div>
-                
+                            <div class="wpcf7 js" id="wpcf7-f48-p46-o1" lang="ja" dir="ltr" data-wpcf7-id="48">
+                                <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+                                <form action="/sushi-owners#wpcf7-f48-p46-o1" method="post" class="wpcf7-form init" aria-label="コンタクトフォーム" novalidate="novalidate" data-status="init">
+                                    <div style="display: none;">
+                                        <input type="hidden" name="_wpcf7" value="48">
+                                        <input type="hidden" name="_wpcf7_version" value="6.0.3">
+                                        <input type="hidden" name="_wpcf7_locale" value="ja">
+                                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f48-p46-o1">
+                                        <input type="hidden" name="_wpcf7_container_post" value="46">
+                                        <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+                                        <input type="hidden" name="_wpcf7_recaptcha_response" value="">
+                                    </div>
+                                    <div class="form_inner_wrap">
+                                        <div class="input_wrap">
+                                            <p><label><span class="req" key="sushi_company_name">会社名</span></label>
+                                                <span class="wpcf7-form-control-wrap" data-name="txt_cname">
+                                                    <input data-i18n-key="sushi_owners_option5"  size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="例：東京寿司職人アカデミー" value="" type="text" name="txt_cname"></span>
+                                            </p>
+                                        </div>
+                                        <div class="input_wrap">
+                                            <p><label><span class="req" key="sushi_owners_name">お名前</span></label>
+                                                <span class="wpcf7-form-control-wrap" data-name="txt_name">
+                                                    <input data-i18n-key="contact_form_name_input" size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="例：田中太郎" value="" type="text" name="txt_name"></span>
+                                            </p>
+                                        </div>
+                                        <div class="input_wrap">
+                                            <p><label><span class="req" key="sushi_owners_address">住所</span></label><span class="wpcf7-form-control-wrap" data-name="txt_address"><input data-i18n-key="sushi_owners_option6" size="40" maxlength="400" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="例：東京都中央区銀座2丁目11-19国光ビル4階" value="" type="text" name="txt_address"></span>
+                                            </p>
+                                        </div>
+                                        <div class="input_wrap">
+                                            <p><label><span class="req" key="sushi_owners_phone">電話番号</span></label><span class="wpcf7-form-control-wrap" data-name="tel-num">
+                                                <input data-i18n-key="sushi_phone_input" size="40" maxlength="400" class="wpcf7-form-control wpcf7-tel wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="例：03-6278-7586" value="" type="tel" name="tel-num"></span>
+                                            </p>
+                                        </div>
+                                        <div class="input_wrap">
+                                            <p><label><span class="req" key="sushi_owners_email">メールアドレス</span></label><span class="wpcf7-form-control-wrap" data-name="txt_email">
+                                                <input data-i18n-key="sushi_email_input" size="40" maxlength="400" class="wpcf7-form-control wpcf7-email wpcf7-validates-as-required wpcf7-text wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="例：example@example.com" value="" type="email" name="txt_email"></span>
+                                            </p>
+                                        </div>
+                                        <div class="input_wrap">
+                                            <p>
+                                                <label><span class="req" key="sushi_owners_faq">お問い合わせ内容</span></label>
+                                                <span class="wpcf7-form-control-wrap" data-name="select-inq">
+                                                    <select class="wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false" name="select-inq">
+                                                        <option key="sushi_owners_option1" value="選択してください">選択してください</option>
+                                                        <option key="sushi_owners_option2" value="掲載について">掲載について</option>
+                                                        <option key="sushi_owners_option3" value="採用について">採用について</option>
+                                                        <option key="sushi_owners_option4" value="その他">その他</option>
+                                                    </select>
+                                                </span>
+                                            </p>
+                                        </div>
+                                        <div class="input_wrap">
+                                            <p>
+                                                <label><span  key="notes">備考</span></label>
+                                                <span class="wpcf7-form-control-wrap" data-name="textarea-msg">
+                                                    <textarea cols="40" rows="10" maxlength="2000" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" name="textarea-msg">
+
+                                                    </textarea>
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="terms_wrap">
+                                        <p><a href="terms.html" class="txt_link" key="sushi_owners_terms_1">利用規約</a><span key="sushi_owners_terms_2">を必ずお読み頂き、</span><br class="sp_break"><span key="sushi_owners_terms_3">同意するにチェックをいれてください。</span>
+                                        </p>
+                                        <p><span class="wpcf7-form-control-wrap" data-name="checkbox-term"><span class="wpcf7-form-control wpcf7-checkbox wpcf7-validates-as-required"><span class="wpcf7-list-item first last"><label><input type="checkbox" name="checkbox-term[]" value="上記に同意する"><span class="wpcf7-list-item-label" key="sushi_owners_above_terms" >上記に同意する</span></label></span></span></span>
+                                        </p>
+                                    </div>
+                                    <div class="captcha_wrap">
+                                        <span class="wpcf7-form-control-wrap recaptcha" data-name="recaptcha"><span data-sitekey="6Lc8ncEqAAAAAFlKk3LdRngZxxB4YmFdmcJ_cCmk" data-align="center" class="wpcf7-form-control wpcf7-recaptcha g-recaptcha"><div style="width: 304px; height: 78px;"><div><iframe title="reCAPTCHA" width="304" height="78" role="presentation" name="a-6c7y1nrrzcyp" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lc8ncEqAAAAAFlKk3LdRngZxxB4YmFdmcJ_cCmk&amp;co=aHR0cHM6Ly90c3NhLmpwOjQ0Mw..&amp;hl=ja&amp;v=hbAq-YhJxOlTnqb9r_mc_r5R&amp;size=normal&amp;cb=qk8js33ort6x"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></span>
+                                            <noscript>
+                                                <div class="grecaptcha-noscript">
+                                                    <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lc8ncEqAAAAAFlKk3LdRngZxxB4YmFdmcJ_cCmk" frameborder="0" scrolling="no" width="310" height="430">
+                                                    </iframe>
+                                                    <textarea name="g-recaptcha-response" rows="3" cols="40" placeholder="reCaptcha レスポンスはこちら">
+                                                    </textarea>
+                                                </div>
+                                            </noscript>
+                                        </span>
+                                    </div>
+                                    <div id="recaptcha-container" style="margin-top: 20px;"></div>
+                                    <div class="btn_wrap">
+                                        <p><input class="wpcf7-form-control wpcf7-submit has-spinner btn" type="submit" value="送信"><span class="wpcf7-spinner"></span>
+                                        </p>
+                                    </div>
+                                    <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </div>   
             </article>
         </main>
 
@@ -162,17 +189,17 @@
                 <div class="container">
                     <div class="case">
                         <div id="f_logo">
-                            <a class="logo_image" href="https://tssa.jp/"><img src="img/logo_footer.png" alt="sushi"></a>
+                            <a class="logo_image" href="index.html"><img src="img/common/logo_footer.png" alt="sushi"></a>
                             <div class="f_details">
-                                <p>
+                                <p key="address">
                                     〒104-0061<br>
                                     東京都中央区銀座２丁目１１−１９国光ビル4階
                                 </p>
-                                <p>
+                                <p key="tel">
                                     TEL：03-6278-7586<br>
                                     営業日：月・火・木・金・土(祝日除く)
                                 </p>
-                                <p>
+                                <p key="access">
                                     ＜アクセス＞<br>
                                     銀座一丁目駅から徒歩　2分<br>
                                     東銀座駅から徒歩　4分<br>
@@ -184,31 +211,31 @@
                         <div class="f_links_wrap">
                             <div class="f_link_item">
                                 <ul class="f_links">
-                                    <li><a href="https://tssa.jp/access/">学校案内</a></li>
-                                    <li class="sp"><a href="https://tssa.jp/career/">就職サポート</a></li>
+                                    <li><a key="school" href="access.html">学校案内</a></li>
+                                    <li class="sp"><a key="placement" href="career.html">就職サポート</a></li>
                                     <li>
-                                        <a href="https://tssa.jp/courses-and-fees/">コース案内</a>
+                                        <a key="course" href="courses-and-fees.html">コース案内</a>
                                         <ul class="sub_f_links pc">
-                                            <li><a href="https://tssa.jp/courses-and-fees/intensive">集中特訓コース</a></li>
+                                            <li><a key="intensive" href="intensive.html">集中特訓コース</a></li>
                                         </ul>
                                     </li>
-                                    <li class="sp"><a href="https://tssa.jp/courses-and-fees/intensive">集中特訓コース</a></li>
+                                    <li class="sp"><a key="intensive" href="intensive.html">集中特訓コース</a></li>
                                 </ul>
                             </div>
                             <div class="f_link_item">
                                 <ul class="f_links">
-                                    <li class="pc"><a href="https://tssa.jp/career/">就職サポート</a></li>
-                                    <li><a href="https://tssa.jp/instructors/">講師紹介</a></li>
-                                    <li><a href="https://tssa.jp/faq/">よくある質問</a></li>
-                                    <li class="sp"><a href="https://tssa.jp/sushi-owners/">寿司店様へ</a></li>
-                                    <li class="sp"><a href="https://tssa.jp/company/">会社概要</a></li>
+                                    <li class="pc"><a key="placement" href="career.html">就職サポート</a></li>
+                                    <li><a key="instructor" href="instructors.html">講師紹介</a></li>
+                                    <li><a key="faq" href="faq.html">よくある質問</a></li>
+                                    <li class="sp"><a key="sushiOwners" href="sushi-owners.html">寿司店様へ</a></li>
+                                    <li class="sp"><a key="company" href="company.html">会社概要</a></li>
                                 </ul>
                             </div>
                             <div class="f_link_item">
                                 <ul class="f_links">
-                                    <li class="pc"><a href="https://tssa.jp/sushi-owners/">寿司店様へ</a></li>
-                                    <li class="pc"><a href="https://tssa.jp/company/">会社概要</a></li>
-                                    <li><a href="https://tssa.jp/terms/">利用規約</a></li>
+                                    <li class="pc"><a key="sushiOwners" href="sushi-owners.html">寿司店様へ</a></li>
+                                    <li class="pc"><a key="company" href="company.html">会社概要</a></li>
+                                    <li><a key="tems" href="terms.html">利用規約</a></li>
                                 </ul>
                             </div>
                             
@@ -222,7 +249,6 @@
                 </div>
             </div>
         </footer>
-        <script src="js/language.js"></script>
     </div>
 </body>
 </html>

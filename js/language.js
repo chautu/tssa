@@ -1265,24 +1265,27 @@ $(document).ready(function() {
 
     function bindLanguageEvents() {
         $('a').on('click', function (e) {
-            if(lang == 'en'){
+            if (lang == 'en') {
                 localStorage.setItem("showLanguageEn", "true");
             }
     
-            const href = $(this).attr('href'); // access.html
-            console.log('HREF:', href);
-            // const matched = urlList.find(item => item.page === href);
-             // Tìm trang tương ứng dựa vào href
-             const matched = urlList.find(item => href === item.url || href.endsWith(item.page));
-             console.log('MATCHED:', matched);
+            const href = $(this).attr('href'); // ví dụ: contact.html/#tab03
+            const urlParts = href.split('#');
+    
+            // 🛠 Xóa dấu '/' nếu có ở cuối
+            let pathOnly = urlParts[0].replace(/\/$/, '');
+            const hash = urlParts[1] ? `#${urlParts[1]}` : '';
+    
+            const matched = urlList.find(item =>
+                pathOnly === item.url || pathOnly.endsWith(item.page)
+            );
+    
             if (matched) {
-                e.preventDefault(); // Ngăn không cho load trang thật
-                const newUrl = basePath + matched.url;
-                console.log('newUrl:', newUrl);
+                e.preventDefault();
+                const newUrl = basePath + matched.url + hash;
                 history.pushState(null, null, newUrl);
-                loadPage(matched);
+                loadPage(matched, hash);
             }
-            
         });
     }
 
@@ -1305,10 +1308,8 @@ $(document).ready(function() {
     
         return Promise.all(promises);
     }
-      
 
-
-    function loadPage(item) {
+    function loadPage(item, hash = '') {
         const baseUrl = window.location.origin + window.location.pathname.replace(/[^\/]*$/, '');
         const fullUrl = baseUrl + item.page;
         $.ajax({
@@ -1316,8 +1317,6 @@ $(document).ready(function() {
             success: function (response) {
                 const html = $('<div>').append($.parseHTML(response));
                 const content = html.find('#wrapper').html();
-                console.log('LOADED CONTENT:', content);
-                //add class body
                 $('body').removeClass();
                 $('body').addClass(item.class);
 
@@ -1344,10 +1343,21 @@ $(document).ready(function() {
                         $("<link>", {rel: "stylesheet",href: "css/content.css"}).appendTo("head");
                     }
                 }
-
+    
+                console.log("content",content)
                 $('#wrapper').html(content);
                 changeLanguage();
                 bindLanguageEvents();
+                console.log("hash",hash)
+                // Cuộn đến phần tử có id tương ứng nếu có hash
+                if (hash) {
+                    const target = $(hash);
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 500);
+                    }
+                }
 
                 const config = pageConfigs[item.page];
                 if (!config) return;
@@ -1358,14 +1368,30 @@ $(document).ready(function() {
                         initFn(); // ✅ Gọi đúng hàm khởi tạo, mỗi trang 1 lần
                     }
                 });
-
-                
+    
+                if (hash) {
+                    setTimeout(() => {
+                        const tabLink = $(`.tab_contact a[href="${hash}"]`);
+                        if (tabLink.length) {
+                            tabLink.trigger('click');
+                        }
+    
+                        const target = $(hash);
+                        if (target.length) {
+                            $('html, body').animate({
+                                scrollTop: target.offset().top
+                            }, 300);
+                        }
+                    }, 100);
+                }
             },
             error: function () {
                 $('#wrapper').html('<p style="color:red;">❌ Lỗi tải trang!</p>');
             }
         });
     }
+    
+      
 
     if (localStorage.getItem("showLanguageEn") === "true") {
         // Cập nhật selected option

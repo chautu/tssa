@@ -1,285 +1,145 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
-    <title>東京寿司職人育成アカデミー｜一流の職人に学ぶ寿司教室</title>
-	<link rel="icon" href="img/favicon/cropped-sushi_favicon-32x32.png" sizes="32x32">
-	<link rel="icon" href="img/favicon/cropped-sushi_favicon-192x192.png" sizes="192x192">
-	<link rel="apple-touch-icon" href="img/favicon/cropped-sushi_favicon-180x180.png">
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
-    <!-- css -->
-    <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="css/base.css">
-	<link rel="stylesheet" href="css/content.css">
-    <style>img:is([sizes="auto" i], [sizes^="auto," i]) { contain-intrinsic-size: 3000px 1500px }</style>
-    <!-- javascript -->
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>	
-	<script src="js/common.js"></script>
-	<script src="js/language.js"></script>
-	<script src="js/url.js"></script>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-</head>
-<body class="page page_courses-and-fees page-courses-and-fees">
-    <div id="wrapper">
-        <header class="fixed">
-            <div class="header_wrap">
-                <div id="logo">
-                    <a href="#/"><img src="img/common/logo.png" alt="一流の職人に学ぶ寿司教室"></a>
-                </div>
-                <nav class="header_menu pc">
-                    <ul>
-                        <li ><a key="school" href="access.html">学校案内</a></li>
-                        <li ><a key="course" href="courses-and-fees.html">コース案内</a></li>
-                        <li ><a key="placement" href="career.html">就職サポート</a></li>
-                        <li ><a key="instructor" href="instructors.html">講師紹介</a></li>
-                        <li ><a key="faq" href="faq.html">よくある質問</a></li>
-                        <li ><a key="sushiOwners" href="sushi-owners.html">寿司店様へ</a></li>
-                        <li >
-                            <div class="custom-select">
-                                <div class="selected-option">
-                                  <img src="img/language/ja.png" alt=""> 日本語
-                                </div>
-                                <ul class="select-options">
-                                  <li data-lang="ja"><img src="img/language/ja.png" alt=""> <span key="languageJa">日本語</span></li>
-                                  <li data-lang="en"><img src="img/language/en.png" alt=""> <span key="languageEn">英語</span></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <!-- <li class="language_en " > -->
-                    </ul>
-                </nav>
-                
-                <div id="trigger-menu" class="sp">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </div>
-                <div id="gnav_sp" class="sp">
-                    <nav id="gnav">
-                        <ul>
-                        <li><a href="access.html">学校案内</a></li>
-                        <li><a href="courses-and-fees.html">コース案内</a></li>
-                        <li><a href="career.html">就職サポート</a></li>
-                        <li><a href="instructors.html">講師紹介</a></li>
-                        <li><a href="faq.html">よくある質問</a></li>
-                        <li><a href="sushi-owners.html">寿司店様へ</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                
-            </div>
-        </header>
-        <div id="mvisual">
-            <div class="mv_wrap">
-                <h2 class="mv_text" key="course_fees">コース案内・学費</h2>
-            </div>
+<script src="js/language.js"></script>
+<div id="wrapper">
+    <div id="mvisual">
+        <div class="mv_wrap">
+            <h2 class="mv_text" key="course_fees">コース案内・学費</h2>
         </div>
-        <div class="breadcrumbs">
-            <div class="container clearfix">
-                <ul>
-                    <li><a href="index.html" key="home">ホーム</a></li>
-                    <li><span key="course_fees_title">コース案内・学費</span></li>
-                </ul>
-            </div>
-        </div>
-        <main>
-            <article id="content">
-                <section id="courses-sec">
-                    <div class="container">
-                        <ul class="courses_menu">
-                            <li><a href="#information"><span key="course">コース案内</span></a></li>
-                            <li><a href="#features"><span key="course_features">コースの特長</span></a></li>
-                            <li><a href="#tuition"><span key="course_tuition">学費</span></a></li>
-                            <li><a href="#loans"><span key="course_tuition_loan">学費ローン</span></a></li>
-                        </ul>
-                    </div>
-                    <div id="information" class="section">
-                        <div class="container-default">
-                            <h2 class="tit_sub">
-                                <span class="tit_en">information</span>
-                                <span class="tit_jp" key="course">コース案内</span>
-                            </h2>
-                            <a href="intensive.html" class="bnr_link"><img decoding="async" src="img/index/bnr_course.jpg" alt="コース案内"></a>
-                            <p class="txt_center" key="course_information">未経験の人でも技術と知識をしっかりと付けれるコースになっております。</p>
-                            <table class="tb_style01">
-                                <tbody><tr>
-                                    <th key="course_centent">コース内容</th>
-                                    <td key="course_centent_txt">週５回の短期集中コース</td>
-                                </tr>
-                                <tr>
-                                    <th key="course_enrollment">入学金</th>
-                                    <td key="course_enrollment_txt">22万円（税込）</td>
-                                </tr>
-                                <tr>
-                                    <th key="course_fees">授業料</th>
-                                    <td key="course_fees_txt">55万円（税込）</td>
-                                </tr>
-                                <tr>
-                                    <th key="course_payment">分割払い</th>
-                                    <td key="course_payment_txt">24回払いで月々33,712 円</td>
-                                </tr>
-                                <tr>
-                                    <th key="course_day">授業曜日</th>
-                                    <td key="course_day_txt">毎週　月・火・木・金・土</td>
-                                </tr>
-                                <tr>
-                                    <th key="course_hours">授業時間</th>
-                                    <td key="course_hours_txt">9:00~16:00</td>
-                                </tr>
-                            </tbody></table>
-                            <a href="intensive.html" class="txt_link"><span key="details">詳細はこちら</span></a>
-                        </div>
-                    </div>
-                    <div id="features" class="section">
-                        <div class="container-default">
-                            <h2 class="tit_sub">
-                                <span class="tit_en">features</span>
-                                <span class="tit_jp" key="course_features">コースの特長</span>
-                            </h2>
-                            <div class="case">
-                                <img decoding="async" src="img/courses/ph_course01.jpg" alt="業界最安値水準・最高品質の授業をご提供">
-                                <div class="pack">
-                                    <h3 class="tit_sec" key="course_features_title">業界最安値水準・最高品質の授業をご提供</h3>
-                                    <p key="course_features_txt">入塾費用の負担をできるだけ下げれるように、一般的には88～110万程度の学費から東京寿司職人育成アカデミーでは最低料金まで下げております。学費ローンの利用も可能なので、24回払いであれば金利込みで月々33,712円と入塾中のバイト代でも十分に支払いが可能でございます。銀座の一流寿司店での実践や、一流講師の授業、と他のアカデミーでは出来ない品質で行っております。</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="tuition" class="section">
-                        <div class="container-default">
-                            <h2 class="tit_sub">
-                                <span class="tit_en">tuition</span>
-                                <span class="tit_jp" key="course_tuition">学費</span>
-                            </h2>
-                            <p class="txt_center" key="course_loans_txt2">2ヵ月集中特訓コース</p>
-                            <table class="tb_style01">
-                                <tbody><tr>
-                                    <th key="course_enrollment">入学金</th>
-                                    <td key="course_enrollment_txt">22万円（税込）</td>
-                                </tr>
-                                <tr>
-                                    <th key="course_fees">授業料</th>
-                                    <td key="course_fees_txt">55万円（税込）</td>
-                                </tr>
-                                <tr>
-                                    <th key="course_payment">分割払い</th>
-                                    <td key="course_payment_txt">24回払いで月々33,712 円！</td>
-                                </tr>
-                            </tbody></table>
-                        </div>
-                    </div>
-                    <div id="loans" class="section">
-                        <div class="container-default">
-                            <h2 class="tit_sub">
-                                <span class="tit_en">loans</span>
-                                <span class="tit_jp" key="course_tuition_loan">学費ローン</span>
-                            </h2>
-                            <p class="txt_center" key="course_loans_txt1">ローンに関してもご紹介の会社で楽々審査が可能です。</p>
-                            <p class="txt_center" key="course_loans_txt2">2ヵ月集中特訓コース</p>
-                            <p class="txt_center txt_big" key="course_loans_fees">全額77万円<span class="sm">（税込）</span></p>
-                            <table class="tb_style03">
-                                <tbody><tr>
-                                    <th key="course_loans_th1">分割</th>
-                                    <th key="course_loans_th2">金額/月(税込)</th>
-                                </tr>
-                                <tr>
-                                    <td key="course_loans_td1">24回</td>
-                                    <td key="course_loans_td2">37,712円</td>
-                                </tr>
-                                <tr>
-                                    <td key="course_loans_td3">36回</td>
-                                    <td key="course_loans_td4">23,008円</td>
-                                </tr>
-                                <tr>
-                                    <td key="course_loans_td5">60回</td>
-                                    <td key="course_loans_td6">14,460円</td>
-                                </tr>
-                            </tbody></table>
-                        </div>
-                    </div>
-                </section>
-                
-                <div class="cta_sec">
-                    <div class="container">
-                        <h2 class="tit_cta" key="course_loans_btn_title">資料請求　随時受付中！</h2>
-                        <div class="btn_list_cta">
-                            <a href="contact.html" class="btn_cta01"><span key="cta_sec_btn01">まずは資料請求（無料）</span></a>
-                            <a href="contact.html/#tab03" class="btn_cta02"><span key="btn_cta02">お問い合わせはこちら</span></a>
-                            <a href="contact.html/#tab02" class="btn_cta03"><span key="btn_cta03">入学願書申し込み</span></a>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </main>
-        <footer>
-            <div class="f_wrap">
-                <div class="container">
-                    <div class="case">
-                        <div id="f_logo">
-                            <a class="logo_image" href="index.html"><img src="img/common/logo_footer.png" alt="sushi"></a>
-                            <div class="f_details">
-                                <p key="address">
-                                    〒104-0061<br>
-                                    東京都中央区銀座２丁目１１−１９国光ビル4階
-                                </p>
-                                <p key="tel">
-                                    TEL：03-6278-7586<br>
-                                    営業日：月・火・木・金・土(祝日除く)
-                                </p>
-                                <p key="access">
-                                    ＜アクセス＞<br>
-                                    銀座一丁目駅から徒歩　2分<br>
-                                    東銀座駅から徒歩　4分<br>
-                                    銀座駅から徒歩　6分<br>
-                                    有楽町駅から徒歩　8分
-                                </p>
-                            </div>
-                        </div>
-                        <div class="f_links_wrap">
-                            <div class="f_link_item">
-                                <ul class="f_links">
-                                    <li><a key="school" href="access.html">学校案内</a></li>
-                                    <li class="sp"><a key="placement" href="career.html">就職サポート</a></li>
-                                    <li>
-                                        <a key="course" href="courses-and-fees.html">コース案内</a>
-                                        <ul class="sub_f_links pc">
-                                            <li><a key="intensive" href="intensive.html">集中特訓コース</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="sp"><a key="intensive" href="intensive.html">集中特訓コース</a></li>
-                                </ul>
-                            </div>
-                            <div class="f_link_item">
-                                <ul class="f_links">
-                                    <li class="pc"><a key="placement" href="career.html">就職サポート</a></li>
-                                    <li><a key="instructor" href="instructors.html">講師紹介</a></li>
-                                    <li><a key="faq" href="faq.html">よくある質問</a></li>
-                                    <li class="sp"><a key="sushiOwners" href="sushi-owners.html">寿司店様へ</a></li>
-                                    <li class="sp"><a key="company" href="company.html">会社概要</a></li>
-                                </ul>
-                            </div>
-                            <div class="f_link_item">
-                                <ul class="f_links">
-                                    <li class="pc"><a key="sushiOwners" href="sushi-owners.html">寿司店様へ</a></li>
-                                    <li class="pc"><a key="company" href="company.html">会社概要</a></li>
-                                    <li><a key="tems" href="terms.html">利用規約</a></li>
-                                </ul>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="f_bottom">
-                <div class="container">
-                    <p class="copyright txt_center">© Copyright - Tokyo Sushi Shokunin Ikusei Academy Co., Ltd.</p>
-                </div>
-            </div>
-        </footer>
     </div>
-</body>
-</html>
+    <div class="breadcrumbs">
+        <div class="container clearfix">
+            <ul>
+                <li><a href="index.html" key="home">ホーム</a></li>
+                <li><span key="course_fees_title">コース案内・学費</span></li>
+            </ul>
+        </div>
+    </div>
+    <main>
+        <article id="content">
+            <section id="courses-sec">
+                <div class="container">
+                    <ul class="courses_menu">
+                        <li><a href="#information"><span key="course">コース案内</span></a></li>
+                        <li><a href="#features"><span key="course_features">コースの特長</span></a></li>
+                        <li><a href="#tuition"><span key="course_tuition">学費</span></a></li>
+                        <li><a href="#loans"><span key="course_tuition_loan">学費ローン</span></a></li>
+                    </ul>
+                </div>
+                <div id="information" class="section">
+                    <div class="container-default">
+                        <h2 class="tit_sub">
+                            <span class="tit_en">information</span>
+                            <span class="tit_jp" key="course">コース案内</span>
+                        </h2>
+                        <a href="intensive.html" class="bnr_link"><img decoding="async" src="img/index/bnr_course.jpg" alt="コース案内"></a>
+                        <p class="txt_center" key="course_information">未経験の人でも技術と知識をしっかりと付けれるコースになっております。</p>
+                        <table class="tb_style01">
+                            <tbody><tr>
+                                <th key="course_centent">コース内容</th>
+                                <td key="course_centent_txt">週５回の短期集中コース</td>
+                            </tr>
+                            <tr>
+                                <th key="course_enrollment">入学金</th>
+                                <td key="course_enrollment_txt">22万円（税込）</td>
+                            </tr>
+                            <tr>
+                                <th key="course_fees">授業料</th>
+                                <td key="course_fees_txt">55万円（税込）</td>
+                            </tr>
+                            <tr>
+                                <th key="course_payment">分割払い</th>
+                                <td key="course_payment_txt">24回払いで月々33,712 円</td>
+                            </tr>
+                            <tr>
+                                <th key="course_day">授業曜日</th>
+                                <td key="course_day_txt">毎週　月・火・木・金・土</td>
+                            </tr>
+                            <tr>
+                                <th key="course_hours">授業時間</th>
+                                <td key="course_hours_txt">9:00~16:00</td>
+                            </tr>
+                        </tbody></table>
+                        <a href="intensive.html" class="txt_link"><span key="details">詳細はこちら</span></a>
+                    </div>
+                </div>
+                <div id="features" class="section">
+                    <div class="container-default">
+                        <h2 class="tit_sub">
+                            <span class="tit_en">features</span>
+                            <span class="tit_jp" key="course_features">コースの特長</span>
+                        </h2>
+                        <div class="case">
+                            <img decoding="async" src="img/courses/ph_course01.jpg" alt="業界最安値水準・最高品質の授業をご提供">
+                            <div class="pack">
+                                <h3 class="tit_sec" key="course_features_title">業界最安値水準・最高品質の授業をご提供</h3>
+                                <p key="course_features_txt">入塾費用の負担をできるだけ下げれるように、一般的には88～110万程度の学費から東京寿司職人育成アカデミーでは最低料金まで下げております。学費ローンの利用も可能なので、24回払いであれば金利込みで月々33,712円と入塾中のバイト代でも十分に支払いが可能でございます。銀座の一流寿司店での実践や、一流講師の授業、と他のアカデミーでは出来ない品質で行っております。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tuition" class="section">
+                    <div class="container-default">
+                        <h2 class="tit_sub">
+                            <span class="tit_en">tuition</span>
+                            <span class="tit_jp" key="course_tuition">学費</span>
+                        </h2>
+                        <p class="txt_center" key="course_loans_txt2">2ヵ月集中特訓コース</p>
+                        <table class="tb_style01">
+                            <tbody><tr>
+                                <th key="course_enrollment">入学金</th>
+                                <td key="course_enrollment_txt">22万円（税込）</td>
+                            </tr>
+                            <tr>
+                                <th key="course_fees">授業料</th>
+                                <td key="course_fees_txt">55万円（税込）</td>
+                            </tr>
+                            <tr>
+                                <th key="course_payment">分割払い</th>
+                                <td key="course_payment_txt">24回払いで月々33,712 円！</td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+                <div id="loans" class="section">
+                    <div class="container-default">
+                        <h2 class="tit_sub">
+                            <span class="tit_en">loans</span>
+                            <span class="tit_jp" key="course_tuition_loan">学費ローン</span>
+                        </h2>
+                        <p class="txt_center" key="course_loans_txt1">ローンに関してもご紹介の会社で楽々審査が可能です。</p>
+                        <p class="txt_center" key="course_loans_txt2">2ヵ月集中特訓コース</p>
+                        <p class="txt_center txt_big" key="course_loans_fees">全額77万円<span class="sm">（税込）</span></p>
+                        <table class="tb_style03">
+                            <tbody><tr>
+                                <th key="course_loans_th1">分割</th>
+                                <th key="course_loans_th2">金額/月(税込)</th>
+                            </tr>
+                            <tr>
+                                <td key="course_loans_td1">24回</td>
+                                <td key="course_loans_td2">37,712円</td>
+                            </tr>
+                            <tr>
+                                <td key="course_loans_td3">36回</td>
+                                <td key="course_loans_td4">23,008円</td>
+                            </tr>
+                            <tr>
+                                <td key="course_loans_td5">60回</td>
+                                <td key="course_loans_td6">14,460円</td>
+                            </tr>
+                        </tbody></table>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="cta_sec">
+                <div class="container">
+                    <h2 class="tit_cta" key="course_loans_btn_title">資料請求　随時受付中！</h2>
+                    <div class="btn_list_cta">
+                        <a href="contact.html" class="btn_cta01"><span key="cta_sec_btn01">まずは資料請求（無料）</span></a>
+                        <a href="contact.html/#tab03" class="btn_cta02"><span key="btn_cta02">お問い合わせはこちら</span></a>
+                        <a href="contact.html/#tab02" class="btn_cta03"><span key="btn_cta03">入学願書申し込み</span></a>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+</div>

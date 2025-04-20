@@ -944,3 +944,28 @@ header .header_wrap .header_menu ul.select-options {
 .select-options li:hover {
 	background: #f0f0f0;
 }
+@media  screen and (max-width:980px){
+	.selected-option{
+		padding: 15px 10px;
+		justify-content: center;
+		border-bottom: 1px solid #000;
+        background: #fff;
+        transition: all ease .3s;
+        color: #000;
+		font-size: 110%;
+        font-weight: bold;
+	}
+	#gnav_sp #gnav ul li .custom-select .select-options{
+		display: none;
+	}
+	.select-options li{
+		padding: 15px 10px;
+		justify-content: center;
+		border-bottom: 1px solid #000;
+        background: #fff;
+        transition: all ease .3s;
+        color: #000;
+		font-size: 110%;
+        font-weight: bold;
+	}
+}

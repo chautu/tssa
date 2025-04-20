@@ -35,7 +35,6 @@ $(document).ready(function() {
 	$('.faq_wrap dt').click(function() {
 		var $this = $(this);
 		var $dt = $this.next('dd');
-
 		// Check if the clicked dd is already active
 		if ($this.hasClass('active')) {
 			// If it is, remove active class and hide its dt

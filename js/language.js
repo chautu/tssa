@@ -1153,38 +1153,43 @@ const arrLang = {
     }
 };
 
-// $(document).ready(function() {
-//     // Mặc định ngôn ngữ là tiếng Anh
-//     let lang = 'ja';
-
-//     // Hàm thay đổi ngôn ngữ
-//     function changeLanguage() {
-//         // Lặp qua các phần tử có thuộc tính 'key'
-//         $('[key]').each(function() {
-//             let key = $(this).attr('key');
-//             const value = arrLang[lang][key];
-
-//             // Nếu có thẻ HTML trong text thì dùng html(), ngược lại dùng text()
-//             if (value.includes('<br>') || value.includes('</')) {
-//                 $(this).html(value);
-//             } else {
-//                 $(this).text(value);
-//             }
-//         });
-//     }
-
-//     $("#language").change(function() {
-//         lang = $('#language').find(":selected").val();
-//         console.log(lang);
-//         // Cập nhật văn bản với ngôn ngữ mới
-//         changeLanguage();
-//     }).change(); 
-    
-
-//     // Cập nhật văn bản khi trang được tải
-//     changeLanguage();
-// });
-
+const urlList = [
+    { url: '/access', page: 'access.html', class: 'page page_access page-access'},
+    { url: '/courses-and-fees', page: 'courses-and-fees.html' , class: 'page page_courses-and-fees page-courses-and-fees'},
+    { url: '/career', page: 'career.html', class: 'page page_career page-career' },
+    { url: '/instructors', page: 'instructors.html', class: 'page page_instructors page-instructors' },
+    { url: '/faq', page: 'faq.html', class: 'page page_faq page-faq' },
+    { url: '/sushi-owners', page: 'sushi-owners.html', class: 'page page_sushi-owners page-sushi-owners' },
+    { url: '/company', page: 'company.html', class: 'page page_company page-company' },
+    { url: '/contact', page: 'contact.html', class: 'page page_contact page-contact' },
+    { url: '/', page: 'index.html', class: ''},
+    { url: '/courses-and-fees/intensive', page: 'courses-and-fees/intensive.html', class: 'page page_intensive page-intensive' },
+    { url: '/maintenance', page: 'maintenance.html', class: '' },
+    { url: '/terms', page: 'terms.html', class: 'page page_terms page-terms'},
+];
+  
+const pageConfigs = {
+    'index.html': {
+      scripts: ['js/top.js'],
+      init: 'initTopPage'
+    },
+    'access.html': {
+      scripts: ['js/table.js'],
+      init: 'initTable'
+    },
+    'intensive.html': {
+      scripts: ['js/table.js'],
+      init: 'initTable'
+    },
+    'faq.html': {
+      scripts: ['js/faq.js'],
+      init: 'initFaq'
+    },
+    'contact.html': {
+        scripts: ['js/contact.js'],
+        init: 'initContact'
+    }
+};
 
 $(document).ready(function() {
     // Mở/đóng dropdown
@@ -1198,9 +1203,7 @@ $(document).ready(function() {
         $('.select-options').hide();
     });
 
-
-
-    // Mặc định ngôn ngữ là tiếng Anh
+    // Mặc định ngôn ngữ là tiếng nhật
     let lang = 'ja';
 
     // Hàm thay đổi ngôn ngữ
@@ -1231,6 +1234,8 @@ $(document).ready(function() {
             $(this).attr('placeholder', text);
           });
     }
+
+   
     
     // Click chọn ngôn ngữ
     $('.select-options li').on('click', function () {
@@ -1251,72 +1256,127 @@ $(document).ready(function() {
         // Đóng dropdown
         $('.select-options').hide();
 
-        // Gọi hàm xử lý đổi ngôn ngữ (nếu có)
+        // Gọi hàm xử lý đổi ngôn ngữ 
         changeLanguage();
     });
 
-    $('a').on('click', function (e) {
-        if(lang == 'en'){
-            localStorage.setItem("showLanguageEn", "true");
-        }
-        
-    });
+    const currentPath = window.location.pathname;
+    const basePath = currentPath.replace(/\/[^\/]*$/, ''); // ví dụ /tssa
+
+    function bindLanguageEvents() {
+        $('a').on('click', function (e) {
+            if(lang == 'en'){
+                localStorage.setItem("showLanguageEn", "true");
+            }
+    
+            const href = $(this).attr('href'); // access.html
+            console.log('HREF:', href);
+            // const matched = urlList.find(item => item.page === href);
+             // Tìm trang tương ứng dựa vào href
+             const matched = urlList.find(item => href === item.url || href.endsWith(item.page));
+             console.log('MATCHED:', matched);
+            if (matched) {
+                e.preventDefault(); // Ngăn không cho load trang thật
+                const newUrl = basePath + matched.url;
+                console.log('newUrl:', newUrl);
+                history.pushState(null, null, newUrl);
+                loadPage(matched);
+            }
+            
+        });
+    }
+
+    function loadScripts(scripts) {
+        const promises = scripts.map(src => {
+            // Nếu script đã tồn tại thì không load lại
+            if ($(`script[src="${src}"]`).length > 0) {
+                return Promise.resolve();
+            }
+    
+            return new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = src;
+                script.type = 'text/javascript';
+                script.onload = resolve;
+                script.onerror = reject;
+                document.head.appendChild(script);
+            });
+        });
+    
+        return Promise.all(promises);
+    }
+      
 
 
+    function loadPage(item) {
+        const baseUrl = window.location.origin + window.location.pathname.replace(/[^\/]*$/, '');
+        const fullUrl = baseUrl + item.page;
+        $.ajax({
+            url: fullUrl,
+            success: function (response) {
+                const html = $('<div>').append($.parseHTML(response));
+                const content = html.find('#wrapper').html();
+                console.log('LOADED CONTENT:', content);
+                //add class body
+                $('body').removeClass();
+                $('body').addClass(item.class);
 
-    //  $("#languageSelect").change(function() {
-    //      lang = $('#languageSelect').find(":selected").val();
-    //       // Cập nhật văn bản với ngôn ngữ mới
-    //       changeLanguage();
-    // }).change(); 
+                if ($('script[src="js/common.js"]').length != 0) {
+                    $('script[src="js/common.js"]').remove();
+                }
+ 
+                if(item.page == 'index.html'){
+                    console.log('loadPage index');
+                    // css
+                    $("link[href='css/content.css']").remove();
+                    $("<link>", {rel: "stylesheet",href: "css/top.css"}).appendTo("head");
+                    //js
+                    $('<script>', {src: 'js/top.js',type: 'text/javascript'}).appendTo('head');
+                }else{
+                    //css
+                    $("link[href='css/top.css']").remove();
+                    $('script[src="js/top.js"]').remove();
 
+                    if ($('link[rel="stylesheet"][href="css/content.css"]').length != 0) {
+                        $("link[href='css/content.css']").remove();
+                        $("<link>", {rel: "stylesheet",href: "css/content.css"}).appendTo("head");
+                    }else{
+                        $("<link>", {rel: "stylesheet",href: "css/content.css"}).appendTo("head");
+                    }
+                }
 
-    // $(".language_en").click(function(event) {
-    //     console.log("1111111111111111");
-    //     event.preventDefault(); // Ngăn hành vi mặc định
+                $('#wrapper').html(content);
+                changeLanguage();
+                bindLanguageEvents();
 
-    //     // Lưu trạng thái vào LocalStorage
-    //     localStorage.setItem("showLanguageEn", "true");
-    //     // var pathname = window.location.pathname;
-    //     // // Mở tab mới
-    //     // if (pathname) {
-    //     //     window.open(pathname, "_blank");
-    //     // }
-    //     lang = 'en';
-    //     changeLanguage();
-    //     $(".language_ja").removeClass("hide"); // Hiển thị phần tử
-    //     $(".language_en").addClass("hide");
-    // });
+                const config = pageConfigs[item.page];
+                if (!config) return;
 
-    // $(".language_ja").click(function(event) {
-    //     event.preventDefault(); // Ngăn hành vi mặc định
+                loadScripts(config.scripts).then(() => {
+                    const initFn = window[config.init];
+                    if (typeof initFn === 'function') {
+                        initFn(); // ✅ Gọi đúng hàm khởi tạo, mỗi trang 1 lần
+                    }
+                });
 
-    //     // Lưu trạng thái vào LocalStorage
-    //     localStorage.setItem("showLanguageEn", "true");
-    //     // var pathname = window.location.pathname;
-    //     // // Mở tab mới
-    //     // if (pathname) {
-    //     //     window.open(pathname, "_blank");
-    //     // }
-    //     lang = 'ja';
-    //     changeLanguage();
-    //     $(".language_ja").addClass("hide"); // Hiển thị phần tử
-    //     $(".language_en").removeClass("hide");
-    // });
-
+                
+            },
+            error: function () {
+                $('#wrapper').html('<p style="color:red;">❌ Lỗi tải trang!</p>');
+            }
+        });
+    }
 
     if (localStorage.getItem("showLanguageEn") === "true") {
         // Cập nhật selected option
         $('.selected-option').html(`<img src="img/language/en.png" alt=""> English`);
         lang = 'en';
-        console.log("lang",lang);
-        console.log("lang",window.location.pathname);
         // Xóa trạng thái để không ảnh hưởng lần tải sau
         localStorage.removeItem("showLanguageEn");
     }
     // Cập nhật văn bản khi trang được tải
     changeLanguage();
-
+    bindLanguageEvents();
 });
 
 

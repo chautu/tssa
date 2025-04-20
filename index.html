@@ -20,13 +20,13 @@
 	<script src="js/common.js"></script>
 	<script src="js/top.js"></script>
 	<script src="js/language.js"></script>
-	<script src="js/url.js"></script>
+	<base href="./">
 </head>
 <body >
 	<header class="fixed">
 		<div class="header_wrap">
 			<div id="logo">
-				<a href="#/"><img src="img/common/logo.png" alt="一流の職人に学ぶ寿司教室"></a>
+				<a href="index.html"><img src="img/common/logo.png" alt="一流の職人に学ぶ寿司教室"></a>
 			</div>
 			<nav class="header_menu pc">
 				<ul>
@@ -47,7 +47,6 @@
 							</ul>
 						</div>
 					</li>
-					<!-- <li class="language_en " > -->
 				</ul>
 			</nav>
 			
@@ -59,12 +58,23 @@
 			<div id="gnav_sp" class="sp">
 				<nav id="gnav">
 					<ul>
-					<li><a href="access.html">学校案内</a></li>
-					<li><a href="courses-and-fees.html">コース案内</a></li>
-					<li><a href="career.html">就職サポート</a></li>
-					<li><a href="instructors.html">講師紹介</a></li>
-					<li><a href="faq.html">よくある質問</a></li>
-					<li><a href="sushi-owners.html">寿司店様へ</a></li>
+						<li><a key="school" href="access.html">学校案内</a></li>
+						<li><a key="course" href="courses-and-fees.html">コース案内</a></li>
+						<li><a key="placement" href="career.html">就職サポート</a></li>
+						<li><a key="instructor" href="instructors.html">講師紹介</a></li>
+						<li><a key="faq" href="faq.html">よくある質問</a></li>
+						<li><a key="sushiOwners" href="sushi-owners.html">寿司店様へ</a></li>
+						<li>
+							<div class="custom-select">
+								<div class="selected-option">
+								  <img src="img/language/ja.png" alt=""> 日本語
+								</div>
+								<ul class="select-options">
+								  <li data-lang="ja"><img src="img/language/ja.png" alt=""> <span key="languageJa">日本語</span></li>
+								  <li data-lang="en"><img src="img/language/en.png" alt=""> <span key="languageEn">英語</span></li>
+								</ul>
+							</div>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -331,10 +341,10 @@
 								<li>
 									<a key="course" href="courses-and-fees.html">コース案内</a>
 									<ul class="sub_f_links pc">
-										<li><a key="intensive" href="intensive.html">集中特訓コース</a></li>
+										<li><a key="intensive" href="courses-and-fees/intensive.html">集中特訓コース</a></li>
 									</ul>
 								</li>
-								<li class="sp"><a key="intensive" href="intensive.html">集中特訓コース</a></li>
+								<li class="sp"><a key="intensive" href="courses-and-fees/intensive.html">集中特訓コース</a></li>
 							</ul>
 						</div>
 						<div class="f_link_item">

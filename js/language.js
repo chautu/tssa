@@ -1163,7 +1163,7 @@ const urlList = [
     { url: '/company', page: 'company.html', class: 'page page_company page-company' },
     { url: '/contact', page: 'contact.html', class: 'page page_contact page-contact' },
     { url: '/', page: 'index.html', class: ''},
-    { url: '/courses-and-fees/intensive', page: 'courses-and-fees/intensive.html', class: 'page page_intensive page-intensive' },
+    { url: '/courses-and-fees/intensive', page: 'intensive.html', class: 'page page_intensive page-intensive' },
     { url: '/maintenance', page: 'maintenance.html', class: '' },
     { url: '/terms', page: 'terms.html', class: 'page page_terms page-terms'},
 ];
@@ -1190,7 +1190,9 @@ const pageConfigs = {
         init: 'initContact'
     }
 };
-
+const currentPath = window.location.pathname;
+const basePath = currentPath.replace(/\/[^\/]*$/, ''); // ví dụ /tssa
+let lang = 'ja';
 $(document).ready(function() {
     // Mở/đóng dropdown
     $('.custom-select .selected-option').on('click', function (e) {
@@ -1204,38 +1206,6 @@ $(document).ready(function() {
     });
 
     // Mặc định ngôn ngữ là tiếng nhật
-    let lang = 'ja';
-
-    // Hàm thay đổi ngôn ngữ
-    function changeLanguage() {
-        // Lặp qua các phần tử có thuộc tính 'key'
-        $('[key]').each(function() {
-            let key = $(this).attr('key');
-            const value = arrLang[lang][key];
-
-            // Nếu có thẻ HTML trong text thì dùng html(), ngược lại dùng text()
-            if (value.includes('<br>') 
-                || value.includes('</') 
-                || value.includes("<br class='sp_break'>") 
-                || value.includes("<span class='sm'>")
-                ||value.includes("<br class='pc_break'>")
-                ||value.includes("<br class='sp'>") ) {
-                $(this).html(value);
-            } else {
-                $(this).text(value);
-            }
-        });
-        const submitInput = arrLang[lang]["btn_submit"];
-        $('.wpcf7-submit').val(submitInput);
-
-        $('[data-i18n-key]').each(function () {
-            const key = $(this).data('i18n-key');
-            const text = arrLang[lang][key] || '';
-            $(this).attr('placeholder', text);
-          });
-    }
-
-   
     
     // Click chọn ngôn ngữ
     $('.select-options li').on('click', function () {
@@ -1260,138 +1230,6 @@ $(document).ready(function() {
         changeLanguage();
     });
 
-    const currentPath = window.location.pathname;
-    const basePath = currentPath.replace(/\/[^\/]*$/, ''); // ví dụ /tssa
-
-    function bindLanguageEvents() {
-        $('a').on('click', function (e) {
-            if (lang == 'en') {
-                localStorage.setItem("showLanguageEn", "true");
-            }
-    
-            const href = $(this).attr('href'); // ví dụ: contact.html/#tab03
-            const urlParts = href.split('#');
-    
-            // 🛠 Xóa dấu '/' nếu có ở cuối
-            let pathOnly = urlParts[0].replace(/\/$/, '');
-            const hash = urlParts[1] ? `#${urlParts[1]}` : '';
-    
-            const matched = urlList.find(item =>
-                pathOnly === item.url || pathOnly.endsWith(item.page)
-            );
-    
-            if (matched) {
-                e.preventDefault();
-                const newUrl = basePath + matched.url + hash;
-                history.pushState(null, null, newUrl);
-                loadPage(matched, hash);
-            }
-        });
-    }
-
-    function loadScripts(scripts) {
-        const promises = scripts.map(src => {
-            // Nếu script đã tồn tại thì không load lại
-            if ($(`script[src="${src}"]`).length > 0) {
-                return Promise.resolve();
-            }
-    
-            return new Promise((resolve, reject) => {
-                const script = document.createElement('script');
-                script.src = src;
-                script.type = 'text/javascript';
-                script.onload = resolve;
-                script.onerror = reject;
-                document.head.appendChild(script);
-            });
-        });
-    
-        return Promise.all(promises);
-    }
-
-    function loadPage(item, hash = '') {
-        const baseUrl = window.location.origin + window.location.pathname.replace(/[^\/]*$/, '');
-        const fullUrl = baseUrl + item.page;
-        $.ajax({
-            url: fullUrl,
-            success: function (response) {
-                const html = $('<div>').append($.parseHTML(response));
-                const content = html.find('#wrapper').html();
-                $('body').removeClass();
-                $('body').addClass(item.class);
-
-                if ($('script[src="js/common.js"]').length != 0) {
-                    $('script[src="js/common.js"]').remove();
-                }
- 
-                if(item.page == 'index.html'){
-                    console.log('loadPage index');
-                    // css
-                    $("link[href='css/content.css']").remove();
-                    $("<link>", {rel: "stylesheet",href: "css/top.css"}).appendTo("head");
-                    //js
-                    $('<script>', {src: 'js/top.js',type: 'text/javascript'}).appendTo('head');
-                }else{
-                    //css
-                    $("link[href='css/top.css']").remove();
-                    $('script[src="js/top.js"]').remove();
-
-                    if ($('link[rel="stylesheet"][href="css/content.css"]').length != 0) {
-                        $("link[href='css/content.css']").remove();
-                        $("<link>", {rel: "stylesheet",href: "css/content.css"}).appendTo("head");
-                    }else{
-                        $("<link>", {rel: "stylesheet",href: "css/content.css"}).appendTo("head");
-                    }
-                }
-    
-                console.log("content",content)
-                $('#wrapper').html(content);
-                changeLanguage();
-                bindLanguageEvents();
-                console.log("hash",hash)
-                // Cuộn đến phần tử có id tương ứng nếu có hash
-                if (hash) {
-                    const target = $(hash);
-                    if (target.length) {
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 500);
-                    }
-                }
-
-                const config = pageConfigs[item.page];
-                if (!config) return;
-
-                loadScripts(config.scripts).then(() => {
-                    const initFn = window[config.init];
-                    if (typeof initFn === 'function') {
-                        initFn(); // ✅ Gọi đúng hàm khởi tạo, mỗi trang 1 lần
-                    }
-                });
-    
-                if (hash) {
-                    setTimeout(() => {
-                        const tabLink = $(`.tab_contact a[href="${hash}"]`);
-                        if (tabLink.length) {
-                            tabLink.trigger('click');
-                        }
-    
-                        const target = $(hash);
-                        if (target.length) {
-                            $('html, body').animate({
-                                scrollTop: target.offset().top
-                            }, 300);
-                        }
-                    }, 100);
-                }
-            },
-            error: function () {
-                $('#wrapper').html('<p style="color:red;">❌ Lỗi tải trang!</p>');
-            }
-        });
-    }
-    
-      
 
     if (localStorage.getItem("showLanguageEn") === "true") {
         // Cập nhật selected option
@@ -1404,5 +1242,170 @@ $(document).ready(function() {
     changeLanguage();
     bindLanguageEvents();
 });
+// Hàm thay đổi ngôn ngữ
+function changeLanguage() {
+    // Lặp qua các phần tử có thuộc tính 'key'
+    $('[key]').each(function() {
+        let key = $(this).attr('key');
+        const value = arrLang[lang][key];
 
+        // Nếu có thẻ HTML trong text thì dùng html(), ngược lại dùng text()
+        if (value.includes('<br>') 
+            || value.includes('</') 
+            || value.includes("<br class='sp_break'>") 
+            || value.includes("<span class='sm'>")
+            ||value.includes("<br class='pc_break'>")
+            ||value.includes("<br class='sp'>") ) {
+            $(this).html(value);
+        } else {
+            $(this).text(value);
+        }
+    });
+    const submitInput = arrLang[lang]["btn_submit"];
+    $('.wpcf7-submit').val(submitInput);
 
+    $('[data-i18n-key]').each(function () {
+        const key = $(this).data('i18n-key');
+        const text = arrLang[lang][key] || '';
+        $(this).attr('placeholder', text);
+      });
+}
+
+function bindLanguageEvents() {
+    $('a').on('click', function (e) {
+        if (lang == 'en') {
+            localStorage.setItem("showLanguageEn", "true");
+        }
+
+        const href = $(this).attr('href'); // ví dụ: contact.html/#tab03
+        const urlParts = href.split('#');
+
+        // 🛠 Xóa dấu '/' nếu có ở cuối
+        let pathOnly = urlParts[0].replace(/\/$/, '');
+        const hash = urlParts[1] ? `#${urlParts[1]}` : '';
+
+        const matched = urlList.find(item =>
+            pathOnly === item.url || pathOnly.endsWith(item.page)
+        );
+
+        if (matched) {
+            e.preventDefault();
+            const newUrl = basePath + matched.url + hash;
+
+            if (newUrl !== window.location.pathname + window.location.hash) {
+                history.pushState(null, null, newUrl);
+                loadPage(matched, hash);
+            }
+        }
+    });
+}
+function loadScripts(scripts) {
+    const promises = scripts.map(src => {
+        // Nếu script đã tồn tại thì không load lại
+        if ($(`script[src="${src}"]`).length > 0) {
+            return Promise.resolve();
+        }
+
+        return new Promise((resolve, reject) => {
+            const script = document.createElement('script');
+            script.src = src;
+            script.type = 'text/javascript';
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.appendChild(script);
+        });
+    });
+
+    return Promise.all(promises);
+}
+function loadPage(item, hash = '') {
+    const baseUrl = window.location.origin + window.location.pathname.replace(/[^\/]*$/, '');
+    const fullUrl = baseUrl + item.page;
+    $.ajax({
+        url: fullUrl,
+        success: function (response) {
+            const html = $('<div>').append($.parseHTML(response));
+            const content = html.find('#wrapper').html();
+            $('body').removeClass();
+            $('body').addClass(item.class);
+
+            if ($('script[src="js/common.js"]').length != 0) {
+                $('script[src="js/common.js"]').remove();
+            }
+
+            if(item.page == 'index.html'){
+                // css
+                $("link[href='css/content.css']").remove();
+                $("<link>", {rel: "stylesheet",href: "css/top.css"}).appendTo("head");
+                //js
+                $('<script>', {src: 'js/top.js',type: 'text/javascript'}).appendTo('head');
+            }else{
+                //css
+                $("link[href='css/top.css']").remove();
+                $('script[src="js/top.js"]').remove();
+
+                if ($('link[rel="stylesheet"][href="css/content.css"]').length != 0) {
+                    $("link[href='css/content.css']").remove();
+                    $("<link>", {rel: "stylesheet",href: "css/content.css"}).appendTo("head");
+                }else{
+                    $("<link>", {rel: "stylesheet",href: "css/content.css"}).appendTo("head");
+                }
+            }
+            $('#wrapper').html(content);
+            changeLanguage();
+            bindLanguageEvents();
+            // Cuộn đến phần tử có id tương ứng nếu có hash
+            if (hash) {
+                const target = $(hash);
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 500);
+                }
+            }
+
+            const config = pageConfigs[item.page];
+            if (!config) return;
+
+            loadScripts(config.scripts).then(() => {
+                const initFn = window[config.init];
+                if (typeof initFn === 'function') {
+                    initFn(); // ✅ Gọi đúng hàm khởi tạo, mỗi trang 1 lần
+                }
+            });
+
+            if (hash) {
+                setTimeout(() => {
+                    const tabLink = $(`.tab_contact a[href="${hash}"]`);
+                    if (tabLink.length) {
+                        tabLink.trigger('click');
+                    }
+
+                    const target = $(hash);
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 300);
+                    }
+                }, 100);
+            }
+        },
+        error: function () {
+            $('#wrapper').html('<p style="color:red;">❌ Lỗi tải trang!</p>');
+        }
+    });
+}
+// Xử lý khi nhấn nút Back hoặc Forward
+window.addEventListener('popstate', function (e) {
+    const fullPath = window.location.pathname.replace(/\/$/, '');
+    const hash = window.location.hash;
+    const pathOnly = fullPath.replace(basePath, '') || '/';
+    
+    const matched = urlList.find(item =>
+        pathOnly === item.url || pathOnly.endsWith(item.page)
+    );
+console.log("matched",matched);
+    if (matched) {
+        loadPage(matched, hash);
+    }
+});
